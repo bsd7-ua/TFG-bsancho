@@ -1,0 +1,44 @@
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.56%
+mAP               : 46.62%
+AP por clase      : ['89.23%', '69.76%', '78.27%', '32.91%', '27.52%', '6.08%', '22.57%']
+Matriz de Confusión:
+[[4272   19   72  440  187    0  190]
+ [  47  463   26    1  269    0   37]
+ [  55   67  844    1    0    0    1]
+ [ 275    0    0  561  251    0   67]
+ [ 319   11    3  670  281    0   53]
+ [  89    0    0   25   15    2    2]
+ [ 250   19  179  196  285    0  177]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8050    0.8247    0.8147      5180
+           1     0.7997    0.5492    0.6512       843
+           2     0.7509    0.8719    0.8069       968
+           3     0.2962    0.4861    0.3681      1154
+           4     0.2182    0.2102    0.2141      1337
+           5     1.0000    0.0150    0.0296       133
+           6     0.3359    0.1600    0.2168      1106
+
+    accuracy                         0.6156     10721
+   macro avg     0.6008    0.4453    0.4431     10721
+weighted avg     0.6258    0.6156    0.6068     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.64%
+mAP               : 56.25%
+AP por clase      : ['95.24%', '67.85%', '93.27%', '56.33%', '44.45%', '2.36%', '34.26%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 50.80%
+mAP               : 38.91%
+AP por clase      : ['82.72%', '64.65%', '55.59%', '20.98%', '17.98%', '15.14%', '15.31%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_evaluation.txt

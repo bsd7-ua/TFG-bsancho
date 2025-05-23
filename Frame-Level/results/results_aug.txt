@@ -1,0 +1,2773 @@
+Iniciando pruebas: Thu May 15 14:31:41 UTC 2025
+
+=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.580
+ Ep2/20 | Val mAP=0.574
+ Ep3/20 | Val mAP=0.575
+ Ep4/20 | Val mAP=0.577
+ Ep5/20 | Val mAP=0.576
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.580
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.580
+[Main] Modelo guardado en ./models/dino_mlp2_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.58%
+mAP               : 46.90%
+AP por clase      : ['90.81%', '76.07%', '82.42%', '28.86%', '21.92%', '5.57%', '22.67%']
+Matriz de Confusión:
+[[4316    1   71  361  178    0  253]
+ [  55  464   35   15  236    0   38]
+ [  56   26  882    0    0    0    4]
+ [ 250    0    1  603  245    0   55]
+ [ 235   20    0  665  350    0   67]
+ [  76    0    2   40   15    0    0]
+ [ 182    0  181  181  361    0  201]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8348    0.8332    0.8340      5180
+           1     0.9080    0.5504    0.6854       843
+           2     0.7526    0.9112    0.8243       968
+           3     0.3233    0.5225    0.3995      1154
+           4     0.2527    0.2618    0.2572      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3252    0.1817    0.2332      1106
+
+    accuracy                         0.6358     10721
+   macro avg     0.4852    0.4658    0.4619     10721
+weighted avg     0.6426    0.6358    0.6304     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.44%
+mAP               : 57.98%
+AP por clase      : ['94.93%', '75.03%', '93.48%', '62.88%', '44.88%', '1.15%', '33.50%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 53.02%
+mAP               : 42.76%
+AP por clase      : ['85.99%', '75.12%', '74.34%', '16.64%', '15.23%', '14.78%', '17.25%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_erasing_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.569
+ Ep2/20 | Val mAP=0.568
+ Ep3/20 | Val mAP=0.568
+ Ep4/20 | Val mAP=0.568
+ Ep5/20 | Val mAP=0.568
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.569
+ Ep7/20 | Val mAP=0.572
+ Ep8/20 | Val mAP=0.572
+ Ep9/20 | Val mAP=0.573
+ Ep10/20 | Val mAP=0.570
+ Ep11/20 | Val mAP=0.571
+ Ep12/20 | Val mAP=0.569
+ Ep13/20 | Val mAP=0.571
+Epoch 00013: reducing learning rate of group 0 to 1.2500e-05.
+ Ep14/20 | Val mAP=0.571
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.573
+[Main] Modelo guardado en ./models/dino_mlp2_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.39%
+mAP               : 47.78%
+AP por clase      : ['89.68%', '79.03%', '77.32%', '32.10%', '21.63%', '10.83%', '23.84%']
+Matriz de Confusión:
+[[4266    0   58  456  159    0  241]
+ [  58  496   29    2  208    0   50]
+ [  58   11  896    1    0    0    2]
+ [ 248    0    0  647  214    0   45]
+ [ 267   18    0  677  307    1   67]
+ [  62    3    2   50   14    2    0]
+ [ 140    8  181  203  392    0  182]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8366    0.8236    0.8300      5180
+           1     0.9254    0.5884    0.7194       843
+           2     0.7684    0.9256    0.8397       968
+           3     0.3178    0.5607    0.4056      1154
+           4     0.2372    0.2296    0.2334      1337
+           5     0.6667    0.0150    0.0294       133
+           6     0.3101    0.1646    0.2150      1106
+
+    accuracy                         0.6339     10721
+   macro avg     0.5803    0.4725    0.4675     10721
+weighted avg     0.6504    0.6339    0.6287     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.23%
+mAP               : 57.13%
+AP por clase      : ['93.20%', '76.98%', '91.83%', '61.72%', '43.79%', '1.28%', '31.11%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.86%
+mAP               : 45.20%
+AP por clase      : ['85.84%', '83.07%', '66.95%', '19.50%', '14.70%', '25.60%', '20.74%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_silhouette_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.565
+ Ep2/20 | Val mAP=0.556
+ Ep3/20 | Val mAP=0.565
+ Ep4/20 | Val mAP=0.572
+ Ep5/20 | Val mAP=0.571
+ Ep6/20 | Val mAP=0.572
+ Ep7/20 | Val mAP=0.578
+ Ep8/20 | Val mAP=0.571
+ Ep9/20 | Val mAP=0.577
+ Ep10/20 | Val mAP=0.581
+ Ep11/20 | Val mAP=0.575
+ Ep12/20 | Val mAP=0.572
+ Ep13/20 | Val mAP=0.573
+ Ep14/20 | Val mAP=0.560
+Epoch 00014: reducing learning rate of group 0 to 2.5000e-05.
+ Ep15/20 | Val mAP=0.562
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.581
+[Main] Modelo guardado en ./models/dino_mlp2_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.04%
+mAP               : 47.20%
+AP por clase      : ['86.87%', '79.27%', '71.59%', '33.55%', '21.23%', '12.57%', '25.33%']
+Matriz de Confusión:
+[[4255    0   59  446  160   18  242]
+ [  58  494   29   22  189    0   51]
+ [  58    6  903    0    0    0    1]
+ [ 265    0    5  632  208    0   44]
+ [ 324   19    1  672  253    4   64]
+ [  51    0    2   47   24    9    0]
+ [ 160    5  181  176  371    0  213]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8229    0.8214    0.8221      5180
+           1     0.9427    0.5860    0.7228       843
+           2     0.7653    0.9329    0.8408       968
+           3     0.3168    0.5477    0.4014      1154
+           4     0.2100    0.1892    0.1991      1337
+           5     0.2903    0.0677    0.1098       133
+           6     0.3463    0.1926    0.2475      1106
+
+    accuracy                         0.6304     10721
+   macro avg     0.5278    0.4768    0.4776     10721
+weighted avg     0.6404    0.6304    0.6249     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.57%
+mAP               : 56.22%
+AP por clase      : ['89.74%', '81.19%', '89.07%', '61.91%', '36.96%', '2.58%', '32.09%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.82%
+mAP               : 44.37%
+AP por clase      : ['83.73%', '78.88%', '56.34%', '20.74%', '15.89%', '32.17%', '22.87%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_silhouette_erasing_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.586
+ Ep2/20 | Val mAP=0.576
+ Ep3/20 | Val mAP=0.565
+ Ep4/20 | Val mAP=0.569
+ Ep5/20 | Val mAP=0.565
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.569
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.586
+[Main] Modelo guardado en ./models/dino_mlp2_water.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.41%
+mAP               : 46.56%
+AP por clase      : ['89.36%', '73.24%', '80.67%', '29.66%', '27.39%', '3.38%', '22.23%']
+Matriz de Confusión:
+[[4403    0  103  435  110    0  129]
+ [  55  454   37    6  244    0   47]
+ [  58   20  890    0    0    0    0]
+ [ 295    0    3  594  218    0   44]
+ [ 250   21    0  674  348    0   44]
+ [ 106    1    0   20    6    0    0]
+ [ 246    3  180  261  307    0  109]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8134    0.8500    0.8313      5180
+           1     0.9098    0.5386    0.6766       843
+           2     0.7337    0.9194    0.8161       968
+           3     0.2985    0.5147    0.3779      1154
+           4     0.2822    0.2603    0.2708      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.2922    0.0986    0.1474      1106
+
+    accuracy                         0.6341     10721
+   macro avg     0.4757    0.4545    0.4457     10721
+weighted avg     0.6283    0.6341    0.6182     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.91%
+mAP               : 56.90%
+AP por clase      : ['93.64%', '72.05%', '91.91%', '57.95%', '47.22%', '0.66%', '34.84%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 53.21%
+mAP               : 40.81%
+AP por clase      : ['83.78%', '71.11%', '70.23%', '18.59%', '17.03%', '10.28%', '14.63%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.572
+ Ep2/20 | Val mAP=0.565
+ Ep3/20 | Val mAP=0.571
+ Ep4/20 | Val mAP=0.572
+ Ep5/20 | Val mAP=0.568
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.576
+ Ep7/20 | Val mAP=0.578
+ Ep8/20 | Val mAP=0.572
+ Ep9/20 | Val mAP=0.571
+ Ep10/20 | Val mAP=0.580
+ Ep11/20 | Val mAP=0.580
+ Ep12/20 | Val mAP=0.575
+ Ep13/20 | Val mAP=0.576
+ Ep14/20 | Val mAP=0.575
+Epoch 00014: reducing learning rate of group 0 to 1.2500e-05.
+ Ep15/20 | Val mAP=0.577
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.580
+[Main] Modelo guardado en ./models/dino_mlp2_water_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.65%
+mAP               : 47.08%
+AP por clase      : ['88.60%', '78.29%', '74.38%', '31.99%', '25.27%', '6.77%', '24.25%']
+Matriz de Confusión:
+[[4352    0   69  414  140    0  205]
+ [  60  470   33    2  227    0   51]
+ [  65   13  890    0    0    0    0]
+ [ 242    0    9  665  205    0   33]
+ [ 241   18    0  677  339    2   60]
+ [  82    1    4   31   13    1    1]
+ [ 225    0  181  172  314    0  214]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8263    0.8402    0.8332      5180
+           1     0.9363    0.5575    0.6989       843
+           2     0.7504    0.9194    0.8264       968
+           3     0.3391    0.5763    0.4270      1154
+           4     0.2738    0.2536    0.2633      1337
+           5     0.3333    0.0075    0.0147       133
+           6     0.3794    0.1935    0.2563      1106
+
+    accuracy                         0.6465     10721
+   macro avg     0.5484    0.4783    0.4742     10721
+weighted avg     0.6545    0.6465    0.6375     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.12%
+mAP               : 57.74%
+AP por clase      : ['91.99%', '76.93%', '91.73%', '63.02%', '44.53%', '0.72%', '35.28%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.48%
+mAP               : 43.18%
+AP por clase      : ['84.32%', '81.21%', '61.97%', '19.00%', '16.35%', '19.50%', '19.92%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_erasing_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.571
+ Ep2/20 | Val mAP=0.565
+ Ep3/20 | Val mAP=0.563
+ Ep4/20 | Val mAP=0.568
+ Ep5/20 | Val mAP=0.571
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.567
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.571
+[Main] Modelo guardado en ./models/dino_mlp2_water_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.81%
+mAP               : 47.08%
+AP por clase      : ['90.02%', '77.85%', '78.03%', '29.63%', '24.77%', '6.20%', '23.04%']
+Matriz de Confusión:
+[[4329    1   79  504   75    0  192]
+ [  45  486   37    2  222    0   51]
+ [  56   13  896    0    0    0    3]
+ [ 267    0    0  652  200    0   35]
+ [ 244   19    0  705  333    0   36]
+ [  90    5    2   30    6    0    0]
+ [ 204    5  180  240  332    0  145]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8269    0.8357    0.8313      5180
+           1     0.9187    0.5765    0.7085       843
+           2     0.7504    0.9256    0.8289       968
+           3     0.3057    0.5650    0.3967      1154
+           4     0.2851    0.2491    0.2659      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3139    0.1311    0.1849      1106
+
+    accuracy                         0.6381     10721
+   macro avg     0.4858    0.4690    0.4594     10721
+weighted avg     0.6404    0.6381    0.6271     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.72%
+mAP               : 56.70%
+AP por clase      : ['94.13%', '75.50%', '90.22%', '57.59%', '45.87%', '0.72%', '32.84%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.18%
+mAP               : 43.42%
+AP por clase      : ['84.90%', '80.66%', '69.66%', '17.92%', '16.14%', '16.04%', '18.63%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_silhouette_evaluation.txt
+
+=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando DINO ViT-B/16…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_dino_water_silhouette_erasing.npz
+[Cache] Filtrado → 82500 muestras
+[Cache] Cargando val_dino.npz
+[Cache] Cargando test_dino.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.567
+ Ep2/20 | Val mAP=0.560
+ Ep3/20 | Val mAP=0.567
+ Ep4/20 | Val mAP=0.567
+ Ep5/20 | Val mAP=0.577
+ Ep6/20 | Val mAP=0.576
+ Ep7/20 | Val mAP=0.576
+ Ep8/20 | Val mAP=0.570
+ Ep9/20 | Val mAP=0.567
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.568
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.577
+[Main] Modelo guardado en ./models/dino_mlp2_water_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_dino.npz
+  Test  → ./cache_embeddings/test_dino.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.69%
+mAP               : 48.09%
+AP por clase      : ['89.00%', '79.03%', '74.12%', '31.60%', '24.63%', '13.69%', '24.53%']
+Matriz de Confusión:
+[[4403    3   58  423   77    2  214]
+ [  51  492   31    2  214    0   53]
+ [  57    9  900    2    0    0    0]
+ [ 267    0   10  643  198    0   36]
+ [ 295   19    0  696  284    4   39]
+ [  73    2    3   39   10    6    0]
+ [ 229    0  181  175  314    0  207]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8192    0.8500    0.8343      5180
+           1     0.9371    0.5836    0.7193       843
+           2     0.7608    0.9298    0.8368       968
+           3     0.3247    0.5572    0.4103      1154
+           4     0.2589    0.2124    0.2334      1337
+           5     0.5000    0.0451    0.0828       133
+           6     0.3770    0.1872    0.2502      1106
+
+    accuracy                         0.6469     10721
+   macro avg     0.5683    0.4808    0.4810     10721
+weighted avg     0.6505    0.6469    0.6353     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.42%
+mAP               : 56.82%
+AP por clase      : ['92.54%', '79.09%', '91.19%', '60.29%', '42.53%', '1.33%', '30.77%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 55.23%
+mAP               : 44.55%
+AP por clase      : ['84.64%', '80.10%', '58.17%', '19.29%', '16.67%', '30.59%', '22.41%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_silhouette_erasing_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.565
+ Ep2/20 | Val mAP=0.555
+ Ep3/20 | Val mAP=0.564
+ Ep4/20 | Val mAP=0.572
+ Ep5/20 | Val mAP=0.569
+ Ep6/20 | Val mAP=0.571
+ Ep7/20 | Val mAP=0.577
+ Ep8/20 | Val mAP=0.574
+ Ep9/20 | Val mAP=0.576
+ Ep10/20 | Val mAP=0.573
+ Ep11/20 | Val mAP=0.575
+Epoch 00011: reducing learning rate of group 0 to 2.5000e-05.
+ Ep12/20 | Val mAP=0.578
+ Ep13/20 | Val mAP=0.573
+ Ep14/20 | Val mAP=0.567
+ Ep15/20 | Val mAP=0.579
+ Ep16/20 | Val mAP=0.570
+ Ep17/20 | Val mAP=0.570
+ Ep18/20 | Val mAP=0.577
+ Ep19/20 | Val mAP=0.570
+Epoch 00019: reducing learning rate of group 0 to 1.2500e-05.
+ Ep20/20 | Val mAP=0.578
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.579
+[Main] Modelo guardado en ./models/resnet_mlp2_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.13%
+mAP               : 47.68%
+AP por clase      : ['86.54%', '76.88%', '73.14%', '37.11%', '24.09%', '13.58%', '22.42%']
+Matriz de Confusión:
+[[4250   15   89  428   80    8  310]
+ [  46  533   31   21  172    5   35]
+ [  61   19  887    1    0    0    0]
+ [ 237    2    2  613  221    2   77]
+ [ 317   26    0  594  231   12  157]
+ [  77    0    4   26    9   16    1]
+ [ 310  131  198  183   43    3  238]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8022    0.8205    0.8112      5180
+           1     0.7342    0.6323    0.6794       843
+           2     0.7325    0.9163    0.8141       968
+           3     0.3285    0.5312    0.4060      1154
+           4     0.3056    0.1728    0.2207      1337
+           5     0.3478    0.1203    0.1788       133
+           6     0.2910    0.2152    0.2474      1106
+
+    accuracy                         0.6313     10721
+   macro avg     0.5059    0.4869    0.4797     10721
+weighted avg     0.6192    0.6313    0.6179     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.87%
+mAP               : 57.80%
+AP por clase      : ['92.23%', '80.96%', '91.63%', '62.05%', '37.86%', '5.76%', '34.14%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.69%
+mAP               : 39.58%
+AP por clase      : ['79.22%', '71.84%', '52.48%', '19.57%', '15.94%', '21.45%', '16.59%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_erasing_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.554
+ Ep2/20 | Val mAP=0.562
+ Ep3/20 | Val mAP=0.565
+ Ep4/20 | Val mAP=0.561
+ Ep5/20 | Val mAP=0.560
+ Ep6/20 | Val mAP=0.563
+ Ep7/20 | Val mAP=0.561
+Epoch 00007: reducing learning rate of group 0 to 2.5000e-05.
+ Ep8/20 | Val mAP=0.562
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.565
+[Main] Modelo guardado en ./models/resnet_mlp2_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.34%
+mAP               : 46.54%
+AP por clase      : ['86.92%', '77.98%', '77.52%', '31.18%', '23.62%', '5.39%', '23.14%']
+Matriz de Confusión:
+[[4372    4   88  377   76    1  262]
+ [  72  526   36    3  162    0   44]
+ [  40   34  893    1    0    0    0]
+ [ 232    1    8  536  290    0   87]
+ [ 320   26    0  628  246    9  108]
+ [ 101    0    1   22    6    1    2]
+ [ 354  120  195  183   35    2  217]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7962    0.8440    0.8194      5180
+           1     0.7398    0.6240    0.6770       843
+           2     0.7314    0.9225    0.8159       968
+           3     0.3063    0.4645    0.3691      1154
+           4     0.3018    0.1840    0.2286      1337
+           5     0.0769    0.0075    0.0137       133
+           6     0.3014    0.1962    0.2377      1106
+
+    accuracy                         0.6334     10721
+   macro avg     0.4648    0.4632    0.4516     10721
+weighted avg     0.6116    0.6334    0.6157     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.46%
+mAP               : 56.16%
+AP por clase      : ['91.94%', '79.30%', '92.83%', '55.31%', '38.74%', '1.07%', '33.94%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.55%
+mAP               : 39.94%
+AP por clase      : ['79.84%', '77.08%', '61.11%', '17.23%', '15.94%', '10.05%', '18.36%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhouette_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.556
+ Ep2/20 | Val mAP=0.558
+ Ep3/20 | Val mAP=0.563
+ Ep4/20 | Val mAP=0.564
+ Ep5/20 | Val mAP=0.565
+ Ep6/20 | Val mAP=0.563
+ Ep7/20 | Val mAP=0.570
+ Ep8/20 | Val mAP=0.566
+ Ep9/20 | Val mAP=0.563
+ Ep10/20 | Val mAP=0.572
+ Ep11/20 | Val mAP=0.573
+ Ep12/20 | Val mAP=0.566
+ Ep13/20 | Val mAP=0.577
+ Ep14/20 | Val mAP=0.576
+ Ep15/20 | Val mAP=0.569
+ Ep16/20 | Val mAP=0.574
+ Ep17/20 | Val mAP=0.583
+ Ep18/20 | Val mAP=0.573
+ Ep19/20 | Val mAP=0.569
+ Ep20/20 | Val mAP=0.579
+[Train] Best mAP: 0.583
+[Main] Modelo guardado en ./models/resnet_mlp2_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.99%
+mAP               : 47.54%
+AP por clase      : ['86.22%', '75.73%', '69.87%', '35.04%', '24.52%', '16.73%', '24.63%']
+Matriz de Confusión:
+[[4383    3   84  350   88   16  256]
+ [  90  544   21   22  136    1   29]
+ [  46   14  907    1    0    0    0]
+ [ 299    2    1  513  250    2   87]
+ [ 364   20    0  511  241   12  189]
+ [  78    0    2   18   13   21    1]
+ [ 338  131  203  108   71    4  251]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7830    0.8461    0.8133      5180
+           1     0.7619    0.6453    0.6988       843
+           2     0.7447    0.9370    0.8298       968
+           3     0.3368    0.4445    0.3833      1154
+           4     0.3016    0.1803    0.2257      1337
+           5     0.3750    0.1579    0.2222       133
+           6     0.3087    0.2269    0.2616      1106
+
+    accuracy                         0.6399     10721
+   macro avg     0.5160    0.4912    0.4907     10721
+weighted avg     0.6158    0.6399    0.6220     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.99%
+mAP               : 57.85%
+AP por clase      : ['92.56%', '80.04%', '91.13%', '57.04%', '37.35%', '9.84%', '36.99%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.27%
+mAP               : 40.05%
+AP por clase      : ['78.75%', '72.84%', '49.25%', '19.90%', '17.65%', '23.02%', '18.98%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhouette_erasing_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.561
+ Ep2/20 | Val mAP=0.566
+ Ep3/20 | Val mAP=0.564
+ Ep4/20 | Val mAP=0.569
+ Ep5/20 | Val mAP=0.566
+ Ep6/20 | Val mAP=0.579
+ Ep7/20 | Val mAP=0.571
+ Ep8/20 | Val mAP=0.559
+ Ep9/20 | Val mAP=0.561
+ Ep10/20 | Val mAP=0.567
+Epoch 00010: reducing learning rate of group 0 to 2.5000e-05.
+ Ep11/20 | Val mAP=0.569
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.579
+[Main] Modelo guardado en ./models/resnet_mlp2_water.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.73%
+mAP               : 47.60%
+AP por clase      : ['87.09%', '78.09%', '79.12%', '34.99%', '26.07%', '4.39%', '23.44%']
+Matriz de Confusión:
+[[4296    5   99  415   90    2  273]
+ [  64  535   19    6  171    3   45]
+ [  52   65  847    1    0    0    3]
+ [ 249    0   19  576  213    0   97]
+ [ 309   19    0  655  245    2  107]
+ [  80    1    6   27   10    2    7]
+ [ 287  119  195  231   50    0  224]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8049    0.8293    0.8170      5180
+           1     0.7191    0.6346    0.6742       843
+           2     0.7148    0.8750    0.7868       968
+           3     0.3014    0.4991    0.3759      1154
+           4     0.3145    0.1832    0.2316      1337
+           5     0.2222    0.0150    0.0282       133
+           6     0.2963    0.2025    0.2406      1106
+
+    accuracy                         0.6273     10721
+   macro avg     0.4819    0.4627    0.4506     10721
+weighted avg     0.6150    0.6273    0.6133     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.99%
+mAP               : 56.91%
+AP por clase      : ['91.83%', '80.18%', '95.47%', '58.28%', '38.78%', '1.05%', '32.76%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.79%
+mAP               : 39.99%
+AP por clase      : ['80.53%', '75.73%', '59.26%', '19.72%', '17.40%', '9.08%', '18.19%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.574
+ Ep2/20 | Val mAP=0.567
+ Ep3/20 | Val mAP=0.568
+ Ep4/20 | Val mAP=0.570
+ Ep5/20 | Val mAP=0.565
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.573
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.574
+[Main] Modelo guardado en ./models/resnet_mlp2_water_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.34%
+mAP               : 47.91%
+AP por clase      : ['87.71%', '77.73%', '81.79%', '33.81%', '25.40%', '5.05%', '23.86%']
+Matriz de Confusión:
+[[4378    7   82  425   62    1  225]
+ [  67  524   24   20  180    1   27]
+ [  57   62  848    1    0    0    0]
+ [ 243    0   19  599  237    0   56]
+ [ 319   21    0  666  244    2   85]
+ [  89    0   10   25    8    0    1]
+ [ 366  143  163  200   36    0  198]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7933    0.8452    0.8184      5180
+           1     0.6922    0.6216    0.6550       843
+           2     0.7400    0.8760    0.8023       968
+           3     0.3094    0.5191    0.3877      1154
+           4     0.3181    0.1825    0.2319      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3345    0.1790    0.2332      1106
+
+    accuracy                         0.6334     10721
+   macro avg     0.4553    0.4605    0.4469     10721
+weighted avg     0.6120    0.6334    0.6141     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.25%
+mAP               : 57.26%
+AP por clase      : ['93.15%', '80.00%', '96.23%', '58.81%', '38.78%', '1.43%', '32.44%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.75%
+mAP               : 40.55%
+AP por clase      : ['80.80%', '75.89%', '64.35%', '17.12%', '16.75%', '10.08%', '18.89%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_erasing_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.567
+ Ep2/20 | Val mAP=0.567
+ Ep3/20 | Val mAP=0.559
+ Ep4/20 | Val mAP=0.564
+ Ep5/20 | Val mAP=0.564
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.566
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.567
+[Main] Modelo guardado en ./models/resnet_mlp2_water_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.28%
+mAP               : 46.88%
+AP por clase      : ['87.59%', '79.24%', '79.71%', '30.42%', '24.39%', '3.72%', '23.08%']
+Matriz de Confusión:
+[[4251    5   95  491  109    0  229]
+ [  48  533   26    8  192    0   36]
+ [  61   56  850    0    0    0    1]
+ [ 193    0   22  600  285    0   54]
+ [ 288   20    0  687  268    5   69]
+ [  92    0    5   23   10    0    3]
+ [ 324  136  165  253   53    0  175]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8086    0.8207    0.8146      5180
+           1     0.7107    0.6323    0.6692       843
+           2     0.7309    0.8781    0.7977       968
+           3     0.2910    0.5199    0.3731      1154
+           4     0.2923    0.2004    0.2378      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3086    0.1582    0.2092      1106
+
+    accuracy                         0.6228     10721
+   macro avg     0.4489    0.4585    0.4431     10721
+weighted avg     0.6122    0.6228    0.6096     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.82%
+mAP               : 56.63%
+AP por clase      : ['92.89%', '81.01%', '94.37%', '55.82%', '40.59%', '0.86%', '30.87%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.08%
+mAP               : 39.89%
+AP por clase      : ['79.93%', '78.17%', '61.44%', '16.72%', '16.08%', '7.81%', '19.08%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_silhouette_evaluation.txt
+
+=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ResNet-152…
+[Extractor] Feature dim = 2048
+[Cache] Usando maestro → train_resnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 82500 muestras
+[Cache] Cargando val_resnet.npz
+[Cache] Cargando test_resnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.566
+ Ep2/20 | Val mAP=0.566
+ Ep3/20 | Val mAP=0.560
+ Ep4/20 | Val mAP=0.563
+ Ep5/20 | Val mAP=0.565
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.571
+ Ep7/20 | Val mAP=0.568
+ Ep8/20 | Val mAP=0.562
+ Ep9/20 | Val mAP=0.561
+ Ep10/20 | Val mAP=0.565
+Epoch 00010: reducing learning rate of group 0 to 1.2500e-05.
+ Ep11/20 | Val mAP=0.565
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.571
+[Main] Modelo guardado en ./models/resnet_mlp2_water_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_resnet.npz
+  Test  → ./cache_embeddings/test_resnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.21%
+mAP               : 47.41%
+AP por clase      : ['86.81%', '79.25%', '75.74%', '34.69%', '24.03%', '7.18%', '24.15%']
+Matriz de Confusión:
+[[4306    4   92  434   67    1  276]
+ [  67  528   25   12  171    1   39]
+ [  52   25  890    1    0    0    0]
+ [ 259    0   21  577  224    0   73]
+ [ 323   18    0  655  234    4  103]
+ [  83    0    5   33    8    3    1]
+ [ 360  112  206  166   23    0  239]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7901    0.8313    0.8102      5180
+           1     0.7686    0.6263    0.6902       843
+           2     0.7183    0.9194    0.8065       968
+           3     0.3072    0.5000    0.3806      1154
+           4     0.3219    0.1750    0.2267      1337
+           5     0.3333    0.0226    0.0423       133
+           6     0.3269    0.2161    0.2602      1106
+
+    accuracy                         0.6321     10721
+   macro avg     0.5095    0.4701    0.4595     10721
+weighted avg     0.6181    0.6321    0.6151     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.76%
+mAP               : 56.47%
+AP por clase      : ['92.27%', '80.82%', '92.08%', '59.17%', '37.44%', '1.44%', '32.05%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.97%
+mAP               : 41.10%
+AP por clase      : ['79.45%', '77.57%', '60.74%', '18.97%', '15.89%', '14.56%', '20.54%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_silhouette_erasing_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.584
+ Ep2/20 | Val mAP=0.572
+ Ep3/20 | Val mAP=0.557
+ Ep4/20 | Val mAP=0.546
+ Ep5/20 | Val mAP=0.555
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.553
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.584
+[Main] Modelo guardado en ./models/vivit_mlp2_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.44%
+mAP               : 45.91%
+AP por clase      : ['89.08%', '71.10%', '76.78%', '30.56%', '27.98%', '3.84%', '22.06%']
+Matriz de Confusión:
+[[4191   23   63  489  206    0  208]
+ [  37  457   33    1  274    0   41]
+ [  47   46  873    1    0    0    1]
+ [ 234    0    3  593  277    0   47]
+ [ 282   17    1  712  303    0   22]
+ [  91    0    0   27   15    0    0]
+ [ 243   10  179  240  264    0  170]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8178    0.8091    0.8134      5180
+           1     0.8264    0.5421    0.6547       843
+           2     0.7578    0.9019    0.8236       968
+           3     0.2874    0.5139    0.3687      1154
+           4     0.2263    0.2266    0.2265      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3476    0.1537    0.2132      1106
+
+    accuracy                         0.6144     10721
+   macro avg     0.4662    0.4496    0.4429     10721
+weighted avg     0.6235    0.6144    0.6088     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.26%
+mAP               : 55.32%
+AP por clase      : ['93.89%', '67.37%', '94.02%', '55.46%', '44.34%', '0.86%', '31.29%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 50.93%
+mAP               : 39.03%
+AP por clase      : ['83.65%', '70.74%', '56.02%', '20.07%', '17.95%', '7.62%', '17.19%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_erasing_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.571
+ Ep2/20 | Val mAP=0.562
+ Ep3/20 | Val mAP=0.553
+ Ep4/20 | Val mAP=0.560
+ Ep5/20 | Val mAP=0.553
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.554
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.571
+[Main] Modelo guardado en ./models/vivit_mlp2_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.67%
+mAP               : 46.86%
+AP por clase      : ['89.07%', '72.56%', '77.97%', '31.93%', '29.29%', '5.04%', '22.18%']
+Matriz de Confusión:
+[[4192   21   78  488  186    0  215]
+ [  37  489   38    1  254    0   24]
+ [  44   40  882    1    0    0    1]
+ [ 229    0    1  594  283    0   47]
+ [ 296   10    5  705  286    0   35]
+ [  93    0    0   26   13    0    1]
+ [ 235   14  179  205  304    0  169]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8178    0.8093    0.8135      5180
+           1     0.8519    0.5801    0.6902       843
+           2     0.7456    0.9112    0.8201       968
+           3     0.2941    0.5147    0.3743      1154
+           4     0.2157    0.2139    0.2148      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3435    0.1528    0.2115      1106
+
+    accuracy                         0.6167     10721
+   macro avg     0.4669    0.4546    0.4463     10721
+weighted avg     0.6234    0.6167    0.6103     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.21%
+mAP               : 55.42%
+AP por clase      : ['94.28%', '67.34%', '93.16%', '58.51%', '42.65%', '0.90%', '31.07%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.44%
+mAP               : 41.32%
+AP por clase      : ['82.87%', '78.40%', '58.99%', '18.92%', '22.01%', '10.28%', '17.81%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhouette_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.576
+ Ep2/20 | Val mAP=0.560
+ Ep3/20 | Val mAP=0.552
+ Ep4/20 | Val mAP=0.551
+ Ep5/20 | Val mAP=0.552
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.545
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.576
+[Main] Modelo guardado en ./models/vivit_mlp2_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.20%
+mAP               : 45.58%
+AP por clase      : ['88.69%', '72.64%', '74.02%', '30.30%', '28.15%', '3.81%', '21.43%']
+Matriz de Confusión:
+[[4166   19   69  481  184    0  261]
+ [  36  462   34    2  269    0   40]
+ [  52   33  882    1    0    0    0]
+ [ 218    0    3  588  276    0   69]
+ [ 283   17    2  710  276    0   49]
+ [  87    0    0   34   12    0    0]
+ [ 244   16  173  202  284    0  187]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8191    0.8042    0.8116      5180
+           1     0.8446    0.5480    0.6647       843
+           2     0.7584    0.9112    0.8278       968
+           3     0.2914    0.5095    0.3707      1154
+           4     0.2121    0.2064    0.2092      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3086    0.1691    0.2185      1106
+
+    accuracy                         0.6120     10721
+   macro avg     0.4620    0.4498    0.4432     10721
+weighted avg     0.6203    0.6120    0.6077     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 71.60%
+mAP               : 54.55%
+AP por clase      : ['93.29%', '67.77%', '93.50%', '54.82%', '42.77%', '0.74%', '28.94%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.09%
+mAP               : 39.84%
+AP por clase      : ['83.04%', '75.05%', '53.69%', '19.84%', '20.80%', '8.30%', '18.18%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhouette_erasing_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.558
+ Ep2/20 | Val mAP=0.575
+ Ep3/20 | Val mAP=0.565
+ Ep4/20 | Val mAP=0.556
+ Ep5/20 | Val mAP=0.552
+ Ep6/20 | Val mAP=0.547
+Epoch 00006: reducing learning rate of group 0 to 2.5000e-05.
+ Ep7/20 | Val mAP=0.547
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.575
+[Main] Modelo guardado en ./models/vivit_mlp2_water.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.73%
+mAP               : 45.56%
+AP por clase      : ['87.66%', '70.67%', '74.71%', '34.54%', '27.11%', '3.83%', '20.38%']
+Matriz de Confusión:
+[[4280    8   92  441  139    0  220]
+ [  28  479   41    1  264    0   30]
+ [  51   78  833    0    0    0    6]
+ [ 212    0    5  595  285    0   57]
+ [ 291   17    0  711  274    0   44]
+ [  99    0    2   22    9    0    1]
+ [ 281   16  178  244  230    0  157]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8165    0.8263    0.8213      5180
+           1     0.8010    0.5682    0.6648       843
+           2     0.7237    0.8605    0.7862       968
+           3     0.2954    0.5156    0.3756      1154
+           4     0.2281    0.2049    0.2159      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3049    0.1420    0.1937      1106
+
+    accuracy                         0.6173     10721
+   macro avg     0.4528    0.4454    0.4368     10721
+weighted avg     0.6145    0.6173    0.6074     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.78%
+mAP               : 54.72%
+AP por clase      : ['92.77%', '67.78%', '91.42%', '57.68%', '41.00%', '0.71%', '31.69%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.00%
+mAP               : 37.42%
+AP por clase      : ['81.59%', '64.54%', '52.46%', '21.69%', '18.84%', '8.86%', '13.98%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.579
+ Ep2/20 | Val mAP=0.570
+ Ep3/20 | Val mAP=0.559
+ Ep4/20 | Val mAP=0.552
+ Ep5/20 | Val mAP=0.553
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.548
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.579
+[Main] Modelo guardado en ./models/vivit_mlp2_water_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.11%
+mAP               : 45.56%
+AP por clase      : ['87.68%', '70.55%', '74.95%', '32.65%', '27.27%', '4.44%', '21.41%']
+Matriz de Confusión:
+[[4301   12   78  469  145    0  175]
+ [  34  480   41    1  258    0   29]
+ [  49   72  846    0    0    0    1]
+ [ 200    0   27  629  273    0   25]
+ [ 313   16    3  712  263    0   30]
+ [  99    1    1   24    8    0    0]
+ [ 251   25  179  262  249    0  140]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8197    0.8303    0.8250      5180
+           1     0.7921    0.5694    0.6625       843
+           2     0.7200    0.8740    0.7895       968
+           3     0.3000    0.5451    0.3870      1154
+           4     0.2199    0.1967    0.2077      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3500    0.1266    0.1859      1106
+
+    accuracy                         0.6211     10721
+   macro avg     0.4574    0.4489    0.4368     10721
+weighted avg     0.6192    0.6211    0.6087     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.62%
+mAP               : 54.77%
+AP por clase      : ['92.64%', '67.38%', '92.14%', '57.07%', '43.13%', '0.68%', '30.37%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.90%
+mAP               : 38.18%
+AP por clase      : ['81.86%', '66.95%', '54.66%', '20.56%', '17.20%', '9.14%', '16.90%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_erasing_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.567
+ Ep2/20 | Val mAP=0.566
+ Ep3/20 | Val mAP=0.561
+ Ep4/20 | Val mAP=0.552
+ Ep5/20 | Val mAP=0.543
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.542
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.567
+[Main] Modelo guardado en ./models/vivit_mlp2_water_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.61%
+mAP               : 45.88%
+AP por clase      : ['87.85%', '71.62%', '75.02%', '33.22%', '27.38%', '5.08%', '21.01%']
+Matriz de Confusión:
+[[4212   17   70  531  140    0  210]
+ [  36  487   42    1  252    0   25]
+ [  42   47  878    0    0    0    1]
+ [ 214    0    5  618  278    0   39]
+ [ 303   14    4  714  271    0   31]
+ [  98    0    2   24    9    0    0]
+ [ 275   19  179  246  248    0  139]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8131    0.8131    0.8131      5180
+           1     0.8339    0.5777    0.6826       843
+           2     0.7441    0.9070    0.8175       968
+           3     0.2896    0.5355    0.3759      1154
+           4     0.2262    0.2027    0.2138      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3124    0.1257    0.1792      1106
+
+    accuracy                         0.6161     10721
+   macro avg     0.4599    0.4517    0.4403     10721
+weighted avg     0.6172    0.6161    0.6060     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 71.64%
+mAP               : 54.16%
+AP por clase      : ['92.37%', '67.61%', '91.56%', '56.31%', '41.94%', '0.66%', '28.68%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.87%
+mAP               : 39.23%
+AP por clase      : ['82.61%', '70.36%', '55.82%', '20.20%', '18.58%', '9.77%', '17.25%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_silhouette_evaluation.txt
+
+=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando ViT vía timm…
+[Extractor] Feature dim = 768
+[Cache] Usando maestro → train_vivit_water_silhouette_erasing.npz
+[Cache] Filtrado → 82500 muestras
+[Cache] Cargando val_vivit.npz
+[Cache] Cargando test_vivit.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.577
+ Ep2/20 | Val mAP=0.557
+ Ep3/20 | Val mAP=0.546
+ Ep4/20 | Val mAP=0.552
+ Ep5/20 | Val mAP=0.546
+Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
+ Ep6/20 | Val mAP=0.550
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.577
+[Main] Modelo guardado en ./models/vivit_mlp2_water_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_vivit.npz
+  Test  → ./cache_embeddings/test_vivit.npz
+>>> Ejecutando mAP_split.py
+/opt/conda/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.08%
+mAP               : 45.71%
+AP por clase      : ['88.37%', '71.68%', '73.37%', '32.80%', '27.31%', '2.60%', '23.86%']
+Matriz de Confusión:
+[[4251   17   84  425  208    0  195]
+ [  38  442   71    1  255    0   36]
+ [  38   33  896    0    0    0    1]
+ [ 199    0   16  597  284    0   58]
+ [ 297    6   11  703  285    0   35]
+ [  93    0    2   25   13    0    0]
+ [ 254   16  179  196  276    0  185]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8222    0.8207    0.8214      5180
+           1     0.8599    0.5243    0.6514       843
+           2     0.7117    0.9256    0.8047       968
+           3     0.3066    0.5173    0.3850      1154
+           4     0.2157    0.2132    0.2144      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3627    0.1673    0.2290      1106
+
+    accuracy                         0.6208     10721
+   macro avg     0.4684    0.4526    0.4437     10721
+weighted avg     0.6265    0.6208    0.6126     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 72.53%
+mAP               : 55.03%
+AP por clase      : ['93.28%', '66.88%', '93.32%', '54.98%', '42.66%', '0.70%', '33.41%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.94%
+mAP               : 39.83%
+AP por clase      : ['82.42%', '74.85%', '54.79%', '21.99%', '19.77%', '5.55%', '19.44%']
+
+Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_silhouette_erasing_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.548
+ Ep2/20 | Val mAP=0.567
+ Ep3/20 | Val mAP=0.570
+ Ep4/20 | Val mAP=0.559
+ Ep5/20 | Val mAP=0.560
+ Ep6/20 | Val mAP=0.559
+ Ep7/20 | Val mAP=0.558
+Epoch 00007: reducing learning rate of group 0 to 2.5000e-05.
+ Ep8/20 | Val mAP=0.561
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.570
+[Main] Modelo guardado en ./models/efficientnet_mlp2_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.28%
+mAP               : 46.36%
+AP por clase      : ['88.77%', '76.74%', '67.38%', '33.15%', '23.54%', '11.79%', '23.16%']
+Matriz de Confusión:
+[[4458    0   64  446   49    1  162]
+ [  50  442   47   26  263    0   15]
+ [  72   18  877    0    0    0    1]
+ [ 282    0    1  586  237    0   48]
+ [ 342   18    0  655  234    9   79]
+ [  79    1    3   34   12    4    0]
+ [ 334  112  191  236   50    0  183]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7937    0.8606    0.8258      5180
+           1     0.7479    0.5243    0.6165       843
+           2     0.7413    0.9060    0.8154       968
+           3     0.2955    0.5078    0.3736      1154
+           4     0.2769    0.1750    0.2145      1337
+           5     0.2857    0.0301    0.0544       133
+           6     0.3750    0.1655    0.2296      1106
+
+    accuracy                         0.6328     10721
+   macro avg     0.5023    0.4528    0.4471     10721
+weighted avg     0.6178    0.6328    0.6124     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.90%
+mAP               : 56.06%
+AP por clase      : ['94.09%', '80.23%', '90.10%', '51.57%', '38.59%', '2.41%', '35.46%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.99%
+mAP               : 39.66%
+AP por clase      : ['82.41%', '71.79%', '46.20%', '21.98%', '17.11%', '21.15%', '16.94%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_erasing_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.548
+ Ep2/20 | Val mAP=0.564
+ Ep3/20 | Val mAP=0.570
+ Ep4/20 | Val mAP=0.572
+ Ep5/20 | Val mAP=0.575
+ Ep6/20 | Val mAP=0.572
+ Ep7/20 | Val mAP=0.571
+ Ep8/20 | Val mAP=0.566
+ Ep9/20 | Val mAP=0.567
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.565
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.575
+[Main] Modelo guardado en ./models/efficientnet_mlp2_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.25%
+mAP               : 46.61%
+AP por clase      : ['89.36%', '77.99%', '68.68%', '31.61%', '23.80%', '11.58%', '23.24%']
+Matriz de Confusión:
+[[4298    0   72  466  137    1  206]
+ [  41  507   39   30  211    0   15]
+ [  70   16  879    1    1    0    1]
+ [ 262    0    1  599  239    0   53]
+ [ 309   11    1  639  280    6   91]
+ [  53    0    3   54   18    4    1]
+ [ 224  119  202  190  157    0  214]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8176    0.8297    0.8236      5180
+           1     0.7764    0.6014    0.6778       843
+           2     0.7343    0.9081    0.8120       968
+           3     0.3027    0.5191    0.3824      1154
+           4     0.2685    0.2094    0.2353      1337
+           5     0.3636    0.0301    0.0556       133
+           6     0.3683    0.1935    0.2537      1106
+
+    accuracy                         0.6325     10721
+   macro avg     0.5188    0.4702    0.4629     10721
+weighted avg     0.6309    0.6325    0.6219     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.12%
+mAP               : 56.53%
+AP por clase      : ['94.73%', '79.15%', '91.95%', '49.10%', '41.91%', '3.95%', '34.90%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.72%
+mAP               : 40.71%
+AP por clase      : ['82.52%', '81.40%', '45.06%', '22.51%', '16.41%', '19.57%', '17.47%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_silhouette_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.549
+ Ep2/20 | Val mAP=0.562
+ Ep3/20 | Val mAP=0.567
+ Ep4/20 | Val mAP=0.568
+ Ep5/20 | Val mAP=0.558
+ Ep6/20 | Val mAP=0.554
+ Ep7/20 | Val mAP=0.561
+ Ep8/20 | Val mAP=0.562
+Epoch 00008: reducing learning rate of group 0 to 2.5000e-05.
+ Ep9/20 | Val mAP=0.557
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.568
+[Main] Modelo guardado en ./models/efficientnet_mlp2_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.19%
+mAP               : 47.22%
+AP por clase      : ['88.77%', '78.27%', '68.97%', '33.53%', '24.72%', '13.67%', '22.62%']
+Matriz de Confusión:
+[[4411    0   67  412   87    3  200]
+ [  66  506   39   36  179    0   17]
+ [  64   12  891    0    0    0    1]
+ [ 255    0    1  598  251    1   48]
+ [ 336   18    1  624  244   10  104]
+ [  61    3    1   43   15   10    0]
+ [ 253  112  198  191  130    0  222]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8100    0.8515    0.8302      5180
+           1     0.7773    0.6002    0.6774       843
+           2     0.7437    0.9205    0.8227       968
+           3     0.3141    0.5182    0.3911      1154
+           4     0.2693    0.1825    0.2176      1337
+           5     0.4167    0.0752    0.1274       133
+           6     0.3750    0.2007    0.2615      1106
+
+    accuracy                         0.6419     10721
+   macro avg     0.5294    0.4784    0.4754     10721
+weighted avg     0.6309    0.6419    0.6265     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.76%
+mAP               : 55.69%
+AP por clase      : ['94.14%', '80.13%', '91.68%', '48.14%', '36.15%', '5.32%', '34.27%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 53.93%
+mAP               : 41.14%
+AP por clase      : ['82.19%', '79.13%', '43.64%', '23.83%', '19.14%', '22.68%', '17.36%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_silhouette_erasing_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.558
+ Ep2/20 | Val mAP=0.567
+ Ep3/20 | Val mAP=0.568
+ Ep4/20 | Val mAP=0.569
+ Ep5/20 | Val mAP=0.575
+ Ep6/20 | Val mAP=0.565
+ Ep7/20 | Val mAP=0.568
+ Ep8/20 | Val mAP=0.569
+ Ep9/20 | Val mAP=0.559
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.559
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.575
+[Main] Modelo guardado en ./models/efficientnet_mlp2_water.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.35%
+mAP               : 45.68%
+AP por clase      : ['88.11%', '70.62%', '69.56%', '35.62%', '26.81%', '4.27%', '24.75%']
+Matriz de Confusión:
+[[4398    0   97  469   82    0  134]
+ [  32  459   31   23  286    0   12]
+ [  67   26  875    0    0    0    0]
+ [ 231    0   10  646  233    0   34]
+ [ 313   19    0  690  277    1   37]
+ [  81    0    2   42    7    0    1]
+ [ 292  117  179  263  118    0  137]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8123    0.8490    0.8303      5180
+           1     0.7391    0.5445    0.6270       843
+           2     0.7328    0.9039    0.8094       968
+           3     0.3029    0.5598    0.3931      1154
+           4     0.2762    0.2072    0.2368      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3859    0.1239    0.1875      1106
+
+    accuracy                         0.6335     10721
+   macro avg     0.4642    0.4555    0.4406     10721
+weighted avg     0.6236    0.6335    0.6147     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.67%
+mAP               : 55.92%
+AP por clase      : ['93.01%', '74.05%', '89.82%', '55.00%', '41.11%', '0.99%', '37.44%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.39%
+mAP               : 38.60%
+AP por clase      : ['82.00%', '68.05%', '50.64%', '23.90%', '19.52%', '8.36%', '17.75%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.562
+ Ep2/20 | Val mAP=0.577
+ Ep3/20 | Val mAP=0.573
+ Ep4/20 | Val mAP=0.569
+ Ep5/20 | Val mAP=0.573
+ Ep6/20 | Val mAP=0.564
+Epoch 00006: reducing learning rate of group 0 to 2.5000e-05.
+ Ep7/20 | Val mAP=0.558
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.577
+[Main] Modelo guardado en ./models/efficientnet_mlp2_water_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.35%
+mAP               : 45.70%
+AP por clase      : ['88.10%', '74.32%', '68.15%', '35.40%', '26.73%', '3.69%', '23.55%']
+Matriz de Confusión:
+[[4366    0   90  502   53    0  169]
+ [  31  471   44   35  255    0    7]
+ [  49   24  894    1    0    0    0]
+ [ 234    0    6  646  227    0   41]
+ [ 317   19    1  690  257    0   53]
+ [  83    1    3   37    7    1    1]
+ [ 327  101  228  241   52    0  157]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8075    0.8429    0.8248      5180
+           1     0.7646    0.5587    0.6456       843
+           2     0.7062    0.9236    0.8004       968
+           3     0.3002    0.5598    0.3908      1154
+           4     0.3020    0.1922    0.2349      1337
+           5     1.0000    0.0075    0.0149       133
+           6     0.3668    0.1420    0.2047      1106
+
+    accuracy                         0.6335     10721
+   macro avg     0.6067    0.4609    0.4452     10721
+weighted avg     0.6342    0.6335    0.6142     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.71%
+mAP               : 55.78%
+AP por clase      : ['92.86%', '76.17%', '89.57%', '54.50%', '38.80%', '0.88%', '37.69%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 51.35%
+mAP               : 38.68%
+AP por clase      : ['81.96%', '70.06%', '49.53%', '24.47%', '20.57%', '7.58%', '16.59%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_erasing_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.550
+ Ep2/20 | Val mAP=0.561
+ Ep3/20 | Val mAP=0.572
+ Ep4/20 | Val mAP=0.570
+ Ep5/20 | Val mAP=0.571
+ Ep6/20 | Val mAP=0.573
+ Ep7/20 | Val mAP=0.572
+ Ep8/20 | Val mAP=0.568
+ Ep9/20 | Val mAP=0.568
+ Ep10/20 | Val mAP=0.567
+Epoch 00010: reducing learning rate of group 0 to 2.5000e-05.
+ Ep11/20 | Val mAP=0.567
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.573
+[Main] Modelo guardado en ./models/efficientnet_mlp2_water_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.68%
+mAP               : 46.64%
+AP por clase      : ['89.22%', '75.52%', '67.10%', '36.11%', '27.41%', '7.71%', '23.44%']
+Matriz de Confusión:
+[[4403    1   88  468   72    0  148]
+ [  40  506   36   34  219    0    8]
+ [  64   15  888    0    0    0    1]
+ [ 291    0   25  602  192    0   44]
+ [ 316   19    0  645  267    3   87]
+ [  82    1    1   34   12    1    2]
+ [ 285  124  186  225  126    0  160]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8033    0.8500    0.8260      5180
+           1     0.7598    0.6002    0.6706       843
+           2     0.7255    0.9174    0.8102       968
+           3     0.2998    0.5217    0.3808      1154
+           4     0.3007    0.1997    0.2400      1337
+           5     0.2500    0.0075    0.0146       133
+           6     0.3556    0.1447    0.2057      1106
+
+    accuracy                         0.6368     10721
+   macro avg     0.4992    0.4630    0.4497     10721
+weighted avg     0.6229    0.6368    0.6173     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.14%
+mAP               : 56.73%
+AP por clase      : ['94.43%', '77.92%', '91.55%', '53.05%', '42.56%', '2.01%', '35.59%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.55%
+mAP               : 40.06%
+AP por clase      : ['81.80%', '77.35%', '46.00%', '25.00%', '19.72%', '13.68%', '16.88%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_silhouette_evaluation.txt
+
+=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando EfficientNet-B0…
+[Extractor] Feature dim = 1280
+[Cache] Usando maestro → train_efficientnet_water_silhouette_erasing.npz
+[Cache] Filtrado → 82500 muestras
+[Cache] Cargando val_efficientnet.npz
+[Cache] Cargando test_efficientnet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.556
+ Ep2/20 | Val mAP=0.563
+ Ep3/20 | Val mAP=0.567
+ Ep4/20 | Val mAP=0.565
+ Ep5/20 | Val mAP=0.571
+ Ep6/20 | Val mAP=0.564
+ Ep7/20 | Val mAP=0.562
+ Ep8/20 | Val mAP=0.553
+ Ep9/20 | Val mAP=0.556
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.557
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.571
+[Main] Modelo guardado en ./models/efficientnet_mlp2_water_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_efficientnet.npz
+  Test  → ./cache_embeddings/test_efficientnet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 63.72%
+mAP               : 46.00%
+AP por clase      : ['87.98%', '73.05%', '66.03%', '35.02%', '27.39%', '9.62%', '22.95%']
+Matriz de Confusión:
+[[4345    0   81  477   89    3  185]
+ [  44  493   37   40  225    0    4]
+ [  64   12  889    1    0    0    2]
+ [ 276    0    8  635  194    1   40]
+ [ 291   18    1  651  287    3   86]
+ [  72    1    1   45    9    5    0]
+ [ 274  136  205  233   81    0  177]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8097    0.8388    0.8240      5180
+           1     0.7470    0.5848    0.6560       843
+           2     0.7275    0.9184    0.8119       968
+           3     0.3050    0.5503    0.3925      1154
+           4     0.3243    0.2147    0.2583      1337
+           5     0.4167    0.0376    0.0690       133
+           6     0.3583    0.1600    0.2213      1106
+
+    accuracy                         0.6372     10721
+   macro avg     0.5269    0.4721    0.4618     10721
+weighted avg     0.6311    0.6372    0.6212     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.82%
+mAP               : 55.66%
+AP por clase      : ['93.09%', '76.86%', '90.11%', '51.43%', '43.12%', '2.26%', '32.74%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.93%
+mAP               : 40.00%
+AP por clase      : ['81.63%', '72.47%', '44.50%', '24.62%', '19.05%', '19.46%', '18.24%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_silhouette_erasing_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.550
+ Ep2/20 | Val mAP=0.553
+ Ep3/20 | Val mAP=0.559
+ Ep4/20 | Val mAP=0.566
+ Ep5/20 | Val mAP=0.573
+ Ep6/20 | Val mAP=0.577
+ Ep7/20 | Val mAP=0.572
+ Ep8/20 | Val mAP=0.575
+ Ep9/20 | Val mAP=0.578
+ Ep10/20 | Val mAP=0.574
+ Ep11/20 | Val mAP=0.573
+ Ep12/20 | Val mAP=0.574
+ Ep13/20 | Val mAP=0.567
+Epoch 00013: reducing learning rate of group 0 to 2.5000e-05.
+ Ep14/20 | Val mAP=0.572
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.578
+[Main] Modelo guardado en ./models/mobilenet_mlp2_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.55%
+mAP               : 46.11%
+AP por clase      : ['86.62%', '68.14%', '71.60%', '37.96%', '23.23%', '12.12%', '23.08%']
+Matriz de Confusión:
+[[4431    2   74  381   76    4  212]
+ [  70  411   25   21  269    0   47]
+ [  56   16  896    0    0    0    0]
+ [ 243    0    0  607  264    0   40]
+ [ 330   18    4  613  265    3  104]
+ [  94    0    2   21    7    9    0]
+ [ 355   59  162  186   43    0  301]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7942    0.8554    0.8237      5180
+           1     0.8123    0.4875    0.6093       843
+           2     0.7704    0.9256    0.8409       968
+           3     0.3319    0.5260    0.4070      1154
+           4     0.2868    0.1982    0.2344      1337
+           5     0.5625    0.0677    0.1208       133
+           6     0.4276    0.2722    0.3326      1106
+
+    accuracy                         0.6455     10721
+   macro avg     0.5694    0.4761    0.4812     10721
+weighted avg     0.6397    0.6455    0.6307     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 76.39%
+mAP               : 57.15%
+AP por clase      : ['91.44%', '72.92%', '97.76%', '57.06%', '41.26%', '2.20%', '37.41%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 53.04%
+mAP               : 36.84%
+AP por clase      : ['80.18%', '52.52%', '46.49%', '21.70%', '13.79%', '26.06%', '17.14%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_erasing_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.528
+ Ep2/20 | Val mAP=0.552
+ Ep3/20 | Val mAP=0.564
+ Ep4/20 | Val mAP=0.568
+ Ep5/20 | Val mAP=0.574
+ Ep6/20 | Val mAP=0.573
+ Ep7/20 | Val mAP=0.579
+ Ep8/20 | Val mAP=0.574
+ Ep9/20 | Val mAP=0.573
+ Ep10/20 | Val mAP=0.573
+ Ep11/20 | Val mAP=0.576
+Epoch 00011: reducing learning rate of group 0 to 2.5000e-05.
+ Ep12/20 | Val mAP=0.580
+ Ep13/20 | Val mAP=0.577
+ Ep14/20 | Val mAP=0.576
+ Ep15/20 | Val mAP=0.574
+ Ep16/20 | Val mAP=0.576
+Epoch 00016: reducing learning rate of group 0 to 1.2500e-05.
+ Ep17/20 | Val mAP=0.575
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.580
+[Main] Modelo guardado en ./models/mobilenet_mlp2_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.29%
+mAP               : 46.94%
+AP por clase      : ['87.95%', '76.17%', '70.82%', '36.50%', '23.25%', '8.19%', '25.69%']
+Matriz de Confusión:
+[[4346    0   72  412   87    1  262]
+ [  51  528   28   17  162    0   57]
+ [  65   15  886    1    0    0    1]
+ [ 260    0    0  595  245    0   54]
+ [ 344   18    1  593  261    3  117]
+ [  84    0    1   36    6    5    1]
+ [ 347   70  169  143  105    0  272]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7906    0.8390    0.8141      5180
+           1     0.8368    0.6263    0.7164       843
+           2     0.7658    0.9153    0.8339       968
+           3     0.3311    0.5156    0.4033      1154
+           4     0.3014    0.1952    0.2369      1337
+           5     0.5556    0.0376    0.0704       133
+           6     0.3560    0.2459    0.2909      1106
+
+    accuracy                         0.6429     10721
+   macro avg     0.5625    0.4821    0.4808     10721
+weighted avg     0.6338    0.6429    0.6288     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.82%
+mAP               : 57.51%
+AP por clase      : ['92.28%', '76.10%', '97.03%', '57.03%', '42.24%', '1.38%', '36.53%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.07%
+mAP               : 39.22%
+AP por clase      : ['82.46%', '71.78%', '47.97%', '19.68%', '14.17%', '16.94%', '21.54%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_silhouette_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.547
+ Ep2/20 | Val mAP=0.559
+ Ep3/20 | Val mAP=0.567
+ Ep4/20 | Val mAP=0.573
+ Ep5/20 | Val mAP=0.576
+ Ep6/20 | Val mAP=0.574
+ Ep7/20 | Val mAP=0.573
+ Ep8/20 | Val mAP=0.570
+ Ep9/20 | Val mAP=0.575
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.568
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.576
+[Main] Modelo guardado en ./models/mobilenet_mlp2_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.22%
+mAP               : 46.56%
+AP por clase      : ['87.90%', '74.00%', '71.47%', '35.28%', '24.21%', '8.93%', '24.13%']
+Matriz de Confusión:
+[[4392    1   68  363   70    1  285]
+ [  77  505   30   12  176    0   43]
+ [  73   20  872    2    0    0    1]
+ [ 249    0    0  558  273    0   74]
+ [ 330   19    2  535  268    4  179]
+ [  83    0    2   27   16    5    0]
+ [ 372   91  167  129   62    0  285]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7877    0.8479    0.8167      5180
+           1     0.7940    0.5991    0.6829       843
+           2     0.7642    0.9008    0.8269       968
+           3     0.3432    0.4835    0.4014      1154
+           4     0.3098    0.2004    0.2434      1337
+           5     0.5000    0.0376    0.0699       133
+           6     0.3287    0.2577    0.2889      1106
+
+    accuracy                         0.6422     10721
+   macro avg     0.5468    0.4753    0.4757     10721
+weighted avg     0.6277    0.6422    0.6272     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.80%
+mAP               : 56.83%
+AP por clase      : ['91.61%', '74.23%', '97.47%', '53.87%', '43.55%', '1.22%', '35.86%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 53.94%
+mAP               : 39.28%
+AP por clase      : ['82.99%', '71.66%', '47.82%', '20.31%', '15.06%', '17.48%', '19.60%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_silhouette_erasing_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 41250 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.539
+ Ep2/20 | Val mAP=0.550
+ Ep3/20 | Val mAP=0.553
+ Ep4/20 | Val mAP=0.564
+ Ep5/20 | Val mAP=0.572
+ Ep6/20 | Val mAP=0.569
+ Ep7/20 | Val mAP=0.567
+ Ep8/20 | Val mAP=0.567
+ Ep9/20 | Val mAP=0.569
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.567
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.572
+[Main] Modelo guardado en ./models/mobilenet_mlp2_water.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.08%
+mAP               : 46.23%
+AP por clase      : ['85.72%', '68.76%', '77.50%', '38.17%', '22.33%', '6.33%', '24.82%']
+Matriz de Confusión:
+[[4433    5   95  358   49    0  240]
+ [  51  409   19    8  303    0   53]
+ [  45   30  891    1    1    0    0]
+ [ 293    0    0  603  213    0   45]
+ [ 354   14    4  589  252    0  124]
+ [ 110    0    2   16    4    1    0]
+ [ 365   41  160  197   62    0  281]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7845    0.8558    0.8186      5180
+           1     0.8196    0.4852    0.6095       843
+           2     0.7609    0.9205    0.8331       968
+           3     0.3403    0.5225    0.4122      1154
+           4     0.2851    0.1885    0.2269      1337
+           5     1.0000    0.0075    0.0149       133
+           6     0.3782    0.2541    0.3039      1106
+
+    accuracy                         0.6408     10721
+   macro avg     0.6241    0.4620    0.4599     10721
+weighted avg     0.6358    0.6408    0.6229     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.99%
+mAP               : 56.68%
+AP por clase      : ['88.64%', '70.86%', '97.03%', '60.58%', '37.83%', '0.69%', '41.13%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.51%
+mAP               : 38.17%
+AP por clase      : ['81.52%', '59.72%', '58.80%', '22.04%', '15.14%', '11.97%', '17.98%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.556
+ Ep2/20 | Val mAP=0.564
+ Ep3/20 | Val mAP=0.569
+ Ep4/20 | Val mAP=0.569
+ Ep5/20 | Val mAP=0.565
+ Ep6/20 | Val mAP=0.568
+ Ep7/20 | Val mAP=0.569
+Epoch 00007: reducing learning rate of group 0 to 2.5000e-05.
+ Ep8/20 | Val mAP=0.571
+ Ep9/20 | Val mAP=0.567
+ Ep10/20 | Val mAP=0.567
+ Ep11/20 | Val mAP=0.569
+ Ep12/20 | Val mAP=0.567
+Epoch 00012: reducing learning rate of group 0 to 1.2500e-05.
+ Ep13/20 | Val mAP=0.568
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.571
+[Main] Modelo guardado en ./models/mobilenet_mlp2_water_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 65.23%
+mAP               : 46.30%
+AP por clase      : ['85.31%', '70.99%', '74.83%', '36.54%', '22.07%', '8.97%', '25.35%']
+Matriz de Confusión:
+[[4475    4   91  352   52    0  206]
+ [  54  460   17   14  233    0   65]
+ [  56   21  889    0    2    0    0]
+ [ 286    0    0  607  219    0   42]
+ [ 347   18    3  584  249    3  133]
+ [ 103    1    5   15    4    5    0]
+ [ 375   55  165  171   32    0  308]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7856    0.8639    0.8229      5180
+           1     0.8229    0.5457    0.6562       843
+           2     0.7598    0.9184    0.8316       968
+           3     0.3483    0.5260    0.4191      1154
+           4     0.3148    0.1862    0.2340      1337
+           5     0.6250    0.0376    0.0709       133
+           6     0.4085    0.2785    0.3312      1106
+
+    accuracy                         0.6523     10721
+   macro avg     0.5807    0.4795    0.4808     10721
+weighted avg     0.6395    0.6523    0.6336     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 76.37%
+mAP               : 56.79%
+AP por clase      : ['88.22%', '71.13%', '96.96%', '58.71%', '39.45%', '0.90%', '42.18%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.40%
+mAP               : 38.39%
+AP por clase      : ['81.46%', '64.18%', '52.33%', '20.08%', '14.87%', '18.13%', '17.70%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_erasing_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 61875 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.523
+ Ep2/20 | Val mAP=0.543
+ Ep3/20 | Val mAP=0.549
+ Ep4/20 | Val mAP=0.566
+ Ep5/20 | Val mAP=0.564
+ Ep6/20 | Val mAP=0.561
+ Ep7/20 | Val mAP=0.563
+ Ep8/20 | Val mAP=0.561
+Epoch 00008: reducing learning rate of group 0 to 2.5000e-05.
+ Ep9/20 | Val mAP=0.563
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.566
+[Main] Modelo guardado en ./models/mobilenet_mlp2_water_silhouette.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.74%
+mAP               : 46.56%
+AP por clase      : ['88.46%', '72.15%', '75.00%', '37.98%', '22.19%', '5.14%', '24.99%']
+Matriz de Confusión:
+[[4423    1   86  353   52    0  265]
+ [  31  492   20    7  231    0   62]
+ [  50   18  899    1    0    0    0]
+ [ 297    0    0  585  216    0   56]
+ [ 359   18    2  557  251    2  148]
+ [ 105    0    4   20    4    0    0]
+ [ 358   42  161  143  111    0  291]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7866    0.8539    0.8188      5180
+           1     0.8616    0.5836    0.6959       843
+           2     0.7671    0.9287    0.8402       968
+           3     0.3511    0.5069    0.4149      1154
+           4     0.2902    0.1877    0.2280      1337
+           5     0.0000    0.0000    0.0000       133
+           6     0.3540    0.2631    0.3019      1106
+
+    accuracy                         0.6474     10721
+   macro avg     0.4872    0.4749    0.4714     10721
+weighted avg     0.6276    0.6474    0.6304     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 75.31%
+mAP               : 56.35%
+AP por clase      : ['92.37%', '68.71%', '97.54%', '58.03%', '37.20%', '0.89%', '39.68%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.48%
+mAP               : 39.79%
+AP por clase      : ['83.18%', '74.71%', '55.12%', '22.15%', '14.63%', '9.07%', '19.70%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_silhouette_evaluation.txt
+
+=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+>>> Ejecutando extract_a_train_aug.py
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V3_Large_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+[Init] Device: cuda
+[Init] Cache dir: ./cache_embeddings
+[Init] Model dir: ./models
+[Extractor] Cargando MobileNet-V3-Large…
+[Extractor] Feature dim = 960
+[Cache] Usando maestro → train_mobilenet_water_silhouette_erasing.npz
+[Cache] Filtrado → 82500 muestras
+[Cache] Cargando val_mobilenet.npz
+[Cache] Cargando test_mobilenet.npz
+[Train] mlp2, epochs=20
+ Ep1/20 | Val mAP=0.550
+ Ep2/20 | Val mAP=0.568
+ Ep3/20 | Val mAP=0.574
+ Ep4/20 | Val mAP=0.574
+ Ep5/20 | Val mAP=0.578
+ Ep6/20 | Val mAP=0.571
+ Ep7/20 | Val mAP=0.570
+ Ep8/20 | Val mAP=0.566
+ Ep9/20 | Val mAP=0.569
+Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
+ Ep10/20 | Val mAP=0.568
+[EarlyStopping] sin mejora 5 epochs → STOP
+[Train] Best mAP: 0.578
+[Main] Modelo guardado en ./models/mobilenet_mlp2_water_silhouette_erasing.pth
+[Main] Embeddings guardados en:
+  Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
+  Val   → ./cache_embeddings/val_mobilenet.npz
+  Test  → ./cache_embeddings/test_mobilenet.npz
+>>> Ejecutando mAP_split.py
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 64.21%
+mAP               : 47.22%
+AP por clase      : ['87.96%', '72.44%', '73.95%', '37.21%', '20.88%', '11.54%', '26.57%']
+Matriz de Confusión:
+[[4413    1   77  390   64    3  232]
+ [  44  487   19   16  227    0   50]
+ [  54   17  894    2    0    0    1]
+ [ 275    0    0  584  256    0   39]
+ [ 347   18    1  596  255    4  116]
+ [  96    0    5   20    3    9    0]
+ [ 349   38  160  158  159    0  242]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.7911    0.8519    0.8204      5180
+           1     0.8681    0.5777    0.6937       843
+           2     0.7734    0.9236    0.8418       968
+           3     0.3307    0.5061    0.4000      1154
+           4     0.2645    0.1907    0.2216      1337
+           5     0.5625    0.0677    0.1208       133
+           6     0.3559    0.2188    0.2710      1106
+
+    accuracy                         0.6421     10721
+   macro avg     0.5637    0.4766    0.4813     10721
+weighted avg     0.6326    0.6421    0.6271     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.50%
+mAP               : 56.77%
+AP por clase      : ['91.60%', '71.38%', '97.97%', '58.17%', '36.99%', '1.43%', '39.81%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 54.22%
+mAP               : 40.44%
+AP por clase      : ['83.14%', '70.38%', '51.35%', '19.97%', '14.02%', '23.15%', '21.03%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_silhouette_erasing_evaluation.txt
+
+Pruebas completadas: Thu May 15 15:30:12 UTC 2025

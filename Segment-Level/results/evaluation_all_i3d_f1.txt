@@ -1,0 +1,329 @@
+﻿===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l5_f256/pdan_framelvl_s1_l5_f256_best_map.pt =====
+
+---- Split: Validation ----
+Tracks (45): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l5_f256/pdan_framelvl_s1_l5_f256_best_map.pt =====
+
+---- Split: Validation ----
+Tracks (45): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+mAP: 60.68% | wAP: 78.81% | Acc: 74.71% | F1w: 73.68%
+
+Matriz de confusión:
+[[11242     0   176   604    71     0   467]
+[  308  1560    52    32   623     0     0]
+[  230     0  2705     0     0     0   112]
+[  653     0     0  1572   544     0   120]
+[ 1276    88     0   187   790     0   205]
+[  123     0     0    74     4     0    48]
+[  232     0    59   267     0     0  1496]]
+
+---- Split: Test ----
+Tracks (51): ['082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 36.91% | wAP: 55.28% | Acc: 53.12% | F1w: 53.76%
+
+Matriz de confusión:
+[[8781  192  304 1741  160  128 1610]
+[   0  643   90    0  464    0  416]
+[  49  281 1261   64    0    0   80]
+[ 486    0    0 1569  665    0  142]
+[ 705    0    0 1319  880   16 1061]
+[ 159    0    0  167    0   16   16]
+[ 972  196  649    4  391    0 1043]]
+
+---- Split: Combined ----
+Tracks (96): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz', '082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 48.57% | wAP: 66.54% | Acc: 63.75% | F1w: 63.42%
+
+Matriz de confusión:
+[[20023   192   480  2345   231   128  2077]
+[  308  2203   142    32  1087     0   416]
+[  279   281  3966    64     0     0   192]
+[ 1139     0     0  3141  1209     0   262]
+[ 1981    88     0  1506  1670    16  1266]
+[  282     0     0   241     4    16    64]
+[ 1204   196   708   271   391     0  2539]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l3_f512/pdan_framelvl_s1_l3_f512_best_map.pt =====
+
+---- Split: Validation ----
+Tracks (45): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+mAP: 60.23% | wAP: 78.49% | Acc: 72.30% | F1w: 71.25%
+
+Matriz de confusión:
+[[10847     0   297   561    63     0   792]
+[  308  1556    52    16   451     0   192]
+[  159    80  2616     0     0     0   192]
+[  710     0     0  1619   432     0   128]
+[ 1319   124     0   184   666     0   253]
+[  123     0     0   122     4     0     0]
+[  278     0    43   298     0     0  1435]]
+
+---- Split: Test ----
+Tracks (51): ['082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 38.15% | wAP: 54.10% | Acc: 48.72% | F1w: 49.11%
+
+Matriz de confusión:
+[[8330  192  130 2126  350    0 1788]
+[   0  627   32    0  336    0  618]
+[  49  338 1124  192    0    0   32]
+[ 919    0    0 1278  649    0   16]
+[ 954    0   78 1442  578    0  929]
+[ 200    0    0  158    0    0    0]
+[ 972  123  684    4  391    0 1081]]
+
+---- Split: Combined ----
+Tracks (96): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz', '082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 48.53% | wAP: 65.63% | Acc: 60.33% | F1w: 59.90%
+
+Matriz de confusión:
+[[19177   192   427  2687   413     0  2580]
+[  308  2183    84    16   787     0   810]
+[  208   418  3740   192     0     0   224]
+[ 1629     0     0  2897  1081     0   144]
+[ 2273   124    78  1626  1244     0  1182]
+[  323     0     0   280     4     0     0]
+[ 1250   123   727   302   391     0  2516]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s3_l5_f512/pdan_framelvl_s3_l5_f512_best_map.pt =====
+
+---- Split: Validation ----
+Tracks (45): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+mAP: 49.65% | wAP: 72.64% | Acc: 68.01% | F1w: 66.82%
+
+Matriz de confusión:
+[[11238     0   224   662     7     0   429]
+[  100   560    52     0   655     0  1208]
+[  230     0  2817     0     0     0     0]
+[  281     0     0  1483   832     0   293]
+[ 1142     0     0   337   522     0   545]
+[   16     0     0   229     0     0     4]
+[  177    32    59   777     0     0  1009]]
+
+---- Split: Test ----
+Tracks (51): ['082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 36.76% | wAP: 54.91% | Acc: 49.06% | F1w: 50.86%
+
+Matriz de confusión:
+[[8537  112   96 1335  125    0 2711]
+[   0  483  263    0    0    0  867]
+[ 177   57 1261   32    0    0  208]
+[ 456    0   80 1358  164    0  804]
+[ 846    0   16 1466  704    0  949]
+[ 153    0    0  157    0    0   48]
+[ 375  212  684   36 1183    0  765]]
+
+---- Split: Combined ----
+Tracks (96): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz', '082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 43.52% | wAP: 63.35% | Acc: 58.39% | F1w: 58.77%
+
+Matriz de confusión:
+[[19775   112   320  1997   132     0  3140]
+[  100  1043   315     0   655     0  2075]
+[  407    57  4078    32     0     0   208]
+[  737     0    80  2841   996     0  1097]
+[ 1988     0    16  1803  1226     0  1494]
+[  169     0     0   386     0     0    52]
+[  552   244   743   813  1183     0  1774]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s2_l5_f512/pdan_framelvl_s2_l5_f512_best_map.pt =====
+
+---- Split: Validation ----
+Tracks (45): ['128-eurasian_moorhen_track0.npz', '163-white_wagtail_track0.npz', '014-black_headed_gull_track2.npz', '049-glossy_ibis_track12.npz', '049-glossy_ibis_track1.npz', '049-glossy_ibis_track16.npz', '083-yellow_legged_gull_track1.npz', '136-eurasian_magpie_track0.npz', '134-eurasian_magpie_track0.npz', '014-black_headed_gull_track0.npz', '051-eurasian_moorhen_track0.npz', '049-glossy_ibis_track0.npz', '138-eurasian_magpie_track0.npz', '102-eurasian_coot_track0.npz', '049-glossy_ibis_track6.npz', '083-yellow_legged_gull_track0.npz', '014-black_headed_gull_track1.npz', '039-gadwall_track0.npz', '070-northern_shoveler_track0.npz', '049-glossy_ibis_track10.npz', '002-squacco_heron_track0.npz', '085-yellow_legged_gull_track1.npz', '036-gadwall_track0.npz', '012-black_headed_gull_track0.npz', '085-yellow_legged_gull_track0.npz', '049-glossy_ibis_track7.npz', '036-gadwall_track2.npz', '005-squacco_heron_track0.npz', '001-white_wagtail_track0.npz', '049-glossy_ibis_track3.npz', '058-northern_shoveler_track0.npz', '109-eurasian_coot_track0.npz', '120-eurasian_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+mAP: 56.66% | wAP: 76.28% | Acc: 71.00% | F1w: 69.14%
+
+Matriz de confusión:
+[[11206     0   208   580    55     0   511]
+[  308   464    52     0   655     0  1096]
+[  230     0  2737     0     0     0    80]
+[  249     0     0  1647   784     0   209]
+[ 1062     0     0   289   794     0   401]
+[  219     0     0    26     0     0     4]
+[  246     0    59   194     0     0  1555]]
+
+---- Split: Test ----
+Tracks (51): ['082-yellow_legged_gull_track1.npz', '021-little_ringed_plover_track0.npz', '042-mallard_track0.npz', '024-black_headed_gull_track1.npz', '024-black_headed_gull_track10.npz', '082-yellow_legged_gull_track4.npz', '024-black_headed_gull_track6.npz', '024-black_headed_gull_track5.npz', '024-black_headed_gull_track11.npz', '073-black_winged_stilt_track7.npz', '108-eurasian_coot_track0.npz', '009-yellow_legged_gull_track0.npz', '073-black_winged_stilt_track4.npz', '171-black_winged_stilt_track1.npz', '024-black_headed_gull_track3.npz', '057-eurasian_moorhen_track0.npz', '082-yellow_legged_gull_track12.npz', '082-yellow_legged_gull_track5.npz', '029-gadwall_track0.npz', '130-eurasian_magpie_track0.npz', '024-black_headed_gull_track0.npz', '073-black_winged_stilt_track0.npz', '024-black_headed_gull_track7.npz', '121-eurasian_moorhen_track0.npz', '019-eurasian_coot_track0.npz', '154-northern_shoveler_track0.npz', '019-eurasian_coot_track1.npz', '174-eurasian_coot_track0.npz', '064-northern_shoveler_track0.npz', '073-black_winged_stilt_track1.npz', '092-little_ringed_plover_track0.npz', '150-squacco_heron_track0.npz', '177-eurasian_magpie_track0.npz', '165-glossy_ibis_track0.npz', '142-mallard_track0.npz', '171-black_winged_stilt_track0.npz', '171-black_winged_stilt_track2.npz', '019-eurasian_coot_track3.npz', '052-eurasian_moorhen_track0.npz', '024-black_headed_gull_track4.npz', '019-eurasian_coot_track2.npz', '027-gadwall_track0.npz', '019-eurasian_coot_track4.npz', '082-yellow_legged_gull_track0.npz', '171-black_winged_stilt_track3.npz', '003-squacco_heron_track0.npz', '082-yellow_legged_gull_track8.npz', '178-white_wagtail_track0.npz', '024-black_headed_gull_track12.npz', '124-black_headed_gull_track0.npz', '167-white_wagtail_track0.npz']
+
+mAP: 35.60% | wAP: 54.38% | Acc: 51.62% | F1w: 51.06%
+
+Matriz de confusión:
+[[9353  208   48 1793  187    0 1327]
+[  16  259  263    0  384    0  691]
+[ 161  233 1229   64    0    0   48]
+[ 707    0    0 1412   89    0  654]
+[1080    0    0 1296  693    0  912]
+[ 175    0    0  167    0    0   16]
+[ 972  212  684    4  535    0  848]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s2_l5_f512/pdan_framelvl_s2_l5_f512_best_map.pt =====
+
+---- Split: Validation ----
+mAP: 56.66% | wAP: 76.28% | Acc: 71.00% | F1w: 69.14%
+
+Matriz de confusión:
+[[11206     0   208   580    55     0   511]
+[  308   464    52     0   655     0  1096]
+[  230     0  2737     0     0     0    80]
+[  249     0     0  1647   784     0   209]
+[ 1062     0     0   289   794     0   401]
+[  219     0     0    26     0     0     4]
+[  246     0    59   194     0     0  1555]]
+
+---- Split: Test ----
+mAP: 35.60% | wAP: 54.38% | Acc: 51.62% | F1w: 51.06%
+
+Matriz de confusión:
+[[9353  208   48 1793  187    0 1327]
+[  16  259  263    0  384    0  691]
+[ 161  233 1229   64    0    0   48]
+[ 707    0    0 1412   89    0  654]
+[1080    0    0 1296  693    0  912]
+[ 175    0    0  167    0    0   16]
+[ 972  212  684    4  535    0  848]]
+
+---- Split: Combined ----
+mAP: 47.61% | wAP: 65.26% | Acc: 61.16% | F1w: 59.95%
+
+Matriz de confusión:
+[[20559   208   256  2373   242     0  1838]
+[  324   723   315     0  1039     0  1787]
+[  391   233  3966    64     0     0   128]
+[  956     0     0  3059   873     0   863]
+[ 2142     0     0  1585  1487     0  1313]
+[  394     0     0   193     0     0    20]
+[ 1218   212   743   198   535     0  2403]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l7_f512/pdan_framelvl_s1_l7_f512_best_map.pt =====
+
+---- Split: Validation ----
+mAP: 63.06% | wAP: 80.58% | Acc: 75.45% | F1w: 74.57%
+
+Matriz de confusión:
+[[11213     0   217   625    87     0   418]
+[  308  1512    52     0   655     0    48]
+[  159    32  2792     0     0     0    64]
+[  393     0     0  1752   640     0   104]
+[ 1222    88     0   225   774     0   237]
+[   91     0     0   154     4     0     0]
+[  198     0    59   284     0     0  1513]]
+
+---- Split: Test ----
+mAP: 40.69% | wAP: 58.00% | Acc: 53.32% | F1w: 53.21%
+
+Matriz de confusión:
+[[9017  192  192 2037   58    0 1420]
+[   0  563   48   42  352    0  608]
+[ 177  178 1188   64    0    0  128]
+[ 328    0    0 1839  521    0  174]
+[ 904    0    0 1452  582    0 1043]
+[ 127    0    0  183    0   16   32]
+[ 967  139  684   31  391    0 1043]]
+
+---- Split: Combined ----
+mAP: 52.01% | wAP: 68.84% | Acc: 64.22% | F1w: 63.64%
+
+Matriz de confusión:
+[[20230   192   409  2662   145     0  1838]
+[  308  2075   100    42  1007     0   656]
+[  336   210  3980    64     0     0   192]
+[  721     0     0  3591  1161     0   278]
+[ 2126    88     0  1677  1356     0  1280]
+[  218     0     0   337     4    16    32]
+[ 1165   139   743   315   391     0  2556]]
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l5_f1024/pdan_framelvl_s1_l5_f1024_best_map.pt =====
+
+
+---- Split: Validation ----
+_moorhen_track0.npz', '090-little_ringed_plover_track0.npz', '075-black_winged_stilt_track0.npz', '074-black_winged_stilt_track0.npz', '014-black_headed_gull_track3.npz', '049-glossy_ibis_track9.npz', '049-glossy_ibis_track2.npz', '089-little_ringed_plover_track0.npz', '041-mallard_track0.npz', '049-glossy_ibis_track5.npz', '049-glossy_ibis_track11.npz', '049-glossy_ibis_track4.npz', '107-eurasian_coot_track0.npz']
+
+mAP: 62.34% | wAP: 80.14% | Acc: 74.56% | F1w: 73.35%
+
+Matriz de confusión:
+[[11136     0   265   816    23     0   320]
+[  324  1448    52     0   655     0    96]
+[  207     0  2744     0     0     0    96]
+[  553     0     0  1923   272     0   141]
+[ 1299    72     0   276   678     0   221]
+[   91     0     0   154     4     0     0]
+[  230     0    59   367     0     0  1398]]
+
+---- Split: Test ----
+
+mAP: 39.47% | wAP: 56.60% | Acc: 52.49% | F1w: 51.47%
+
+Matriz de confusión:
+[[9270  112  128 1853   65    0 1488]
+[  32  430   85   42  352    0  672]
+[ 177   41 1309  192    0    0   16]
+[ 448    0    0 1639  569    0  206]
+[1182    0    0 1361  367    0 1071]
+[ 207    0    0  119    0    0   32]
+[ 972   73  798   10  391    0 1011]]
+
+---- Split: Combined ----
+
+mAP: 49.80% | wAP: 67.49% | Acc: 63.36% | F1w: 62.18%
+
+Matriz de confusión:
+[[20406   112   393  2669    88     0  1808]
+[  356  1878   137    42  1007     0   768]
+[  384    41  4053   192     0     0   112]
+[ 1001     0     0  3562   841     0   347]
+[ 2481    72     0  1637  1045     0  1292]
+[  298     0     0   273     4     0    32]
+[ 1202    73   857   377   391     0  2409]]
+
+
+
+===== Evaluación ./checkpoints_birds/fase1/pdan_framelvl_s1_l5_f512/pdan_framelvl_s1_l5_f512_best_map.pt =====
+
+---- Split: Validation ----
+
+mAP: 61.21% | wAP: 79.38% | Acc: 74.32% | F1w: 73.01%
+
+Matriz de confusión:
+[[11376     0   176   517    55     0   436]
+[  308  1560    52    16   639     0     0]
+[  230    48  2641     0     0     0   128]
+[  696     0     0  1488   528     0   177]
+[ 1426    88     0   209   698     0   125]
+[  159     0     0    90     0     0     0]
+[  253     0    59   240     0     0  1502]]
+
+---- Split: Test ----
+
+mAP: 39.21% | wAP: 56.42% | Acc: 53.59% | F1w: 53.55%
+
+Matriz de confusión:
+[[9280  240   80 1830  222    0 1264]
+[  32  643   48   16  384    0  490]
+[ 129  345 1165   96    0    0    0]
+[ 806    0    0 1269  649    0  138]
+[ 980    0    0 1204  930   16  851]
+[ 265    0    0   45    0   16   32]
+[1004  212  627    4  391    0 1017]]
+
+---- Split: Combined ----
+
+mAP: 49.00% | wAP: 66.73% | Acc: 63.80% | F1w: 62.97%
+
+Matriz de confusión:
+[[20656   240   256  2347   277     0  1700]
+[  340  2203   100    32  1023     0   490]
+[  359   393  3806    96     0     0   128]
+[ 1502     0     0  2757  1177     0   315]
+[ 2406    88     0  1413  1628    16   976]
+[  424     0     0   135     0    16    32]
+[ 1257   212   686   244   391     0  2519]]
+

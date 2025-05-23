@@ -1,0 +1,44 @@
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.76%
+mAP               : 47.31%
+AP por clase      : ['87.87%', '72.25%', '72.83%', '38.36%', '25.05%', '13.97%', '20.83%']
+Matriz de Confusión:
+[[4185    1   88  448  124    2  332]
+ [  57  486   15   14  228    0   43]
+ [  41   43  879    1    3    0    1]
+ [ 195    1    0  621  270    1   66]
+ [ 252   19    0  602  314   10  140]
+ [  85    2    3   26    6   11    0]
+ [ 287  105  158  192  132    0  232]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8203    0.8079    0.8140      5180
+           1     0.7397    0.5765    0.6480       843
+           2     0.7690    0.9081    0.8328       968
+           3     0.3262    0.5381    0.4061      1154
+           4     0.2916    0.2349    0.2601      1337
+           5     0.4583    0.0827    0.1401       133
+           6     0.2850    0.2098    0.2417      1106
+
+    accuracy                         0.6276     10721
+   macro avg     0.5272    0.4797    0.4776     10721
+weighted avg     0.6305    0.6276    0.6223     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.65%
+mAP               : 57.92%
+AP por clase      : ['93.05%', '76.09%', '97.90%', '57.58%', '41.42%', '4.19%', '35.20%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.18%
+mAP               : 39.12%
+AP por clase      : ['81.57%', '58.95%', '53.02%', '23.65%', '16.57%', '24.70%', '15.36%']
+
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp3_evaluation.txt

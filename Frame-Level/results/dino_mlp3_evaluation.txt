@@ -1,0 +1,44 @@
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.79%
+mAP               : 47.35%
+AP por clase      : ['88.45%', '77.47%', '77.87%', '34.06%', '23.16%', '8.65%', '21.76%']
+Matriz de Confusión:
+[[4118    2   61  462  185   58  294]
+ [  36  506   20    6  214    8   53]
+ [  50   14  901    2    0    0    1]
+ [ 227    0    3  634  225    4   61]
+ [ 222   24    0  654  334   28   75]
+ [  49    4    1   45   16   18    0]
+ [ 251   31  180  164  259    0  221]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8314    0.7950    0.8128      5180
+           1     0.8709    0.6002    0.7107       843
+           2     0.7727    0.9308    0.8444       968
+           3     0.3223    0.5494    0.4063      1154
+           4     0.2709    0.2498    0.2599      1337
+           5     0.1552    0.1353    0.1446       133
+           6     0.3135    0.1998    0.2441      1106
+
+    accuracy                         0.6279     10721
+   macro avg     0.5053    0.4943    0.4890     10721
+weighted avg     0.6427    0.6279    0.6280     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 73.57%
+mAP               : 58.21%
+AP por clase      : ['93.63%', '76.04%', '93.93%', '60.75%', '44.55%', '3.56%', '34.98%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 52.33%
+mAP               : 44.21%
+AP por clase      : ['82.93%', '79.60%', '67.59%', '22.32%', '14.96%', '25.63%', '16.47%']
+
+Todos los resultados también han sido guardados en: ./models/dino_mlp3_evaluation.txt

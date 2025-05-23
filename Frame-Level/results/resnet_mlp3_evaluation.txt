@@ -1,0 +1,44 @@
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 62.57%
+mAP               : 47.43%
+AP por clase      : ['86.09%', '74.56%', '80.26%', '35.51%', '24.34%', '10.20%', '21.05%']
+Matriz de Confusión:
+[[4127   17  101  468  139   13  315]
+ [  28  568   20   21  169    7   30]
+ [  42   39  886    1    0    0    0]
+ [ 195    1    1  638  223    3   93]
+ [ 273   28    1  594  255   19  167]
+ [  68    1    0   30   17   13    4]
+ [ 215  212  170  238   41    9  221]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8341    0.7967    0.8150      5180
+           1     0.6559    0.6738    0.6647       843
+           2     0.7515    0.9153    0.8253       968
+           3     0.3206    0.5529    0.4059      1154
+           4     0.3021    0.1907    0.2338      1337
+           5     0.2031    0.0977    0.1320       133
+           6     0.2663    0.1998    0.2283      1106
+
+    accuracy                         0.6257     10721
+   macro avg     0.4762    0.4896    0.4721     10721
+weighted avg     0.6246    0.6257    0.6186     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.57%
+mAP               : 57.28%
+AP por clase      : ['92.42%', '76.93%', '95.65%', '59.93%', '39.40%', '4.21%', '32.44%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 50.91%
+mAP               : 39.82%
+AP por clase      : ['78.86%', '72.79%', '58.03%', '19.23%', '15.49%', '18.58%', '15.74%']
+
+Todos los resultados también han sido guardados en: ./models/resnet_mlp3_evaluation.txt

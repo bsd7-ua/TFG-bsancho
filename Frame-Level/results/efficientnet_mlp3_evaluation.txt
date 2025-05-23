@@ -1,0 +1,44 @@
+Cargando Val (5282) + Test (5439) muestras
+
+=== RESULTADOS VAL+TEST ===
+Muestras          : 10721
+Accuracy          : 61.89%
+mAP               : 46.15%
+AP por clase      : ['88.63%', '76.11%', '71.58%', '31.58%', '24.30%', '9.54%', '21.31%']
+Matriz de Confusión:
+[[4197    0  115  542  105    3  218]
+ [  35  466   50   32  250    0   10]
+ [  40   40  887    0    0    0    1]
+ [ 197    0    1  627  266    3   60]
+ [ 314    9    1  649  264    3   97]
+ [  70    3    2   42   12    4    0]
+ [ 238   92  222  220  144    0  190]]
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0     0.8244    0.8102    0.8173      5180
+           1     0.7639    0.5528    0.6414       843
+           2     0.6941    0.9163    0.7898       968
+           3     0.2969    0.5433    0.3840      1154
+           4     0.2536    0.1975    0.2220      1337
+           5     0.3077    0.0301    0.0548       133
+           6     0.3299    0.1718    0.2259      1106
+
+    accuracy                         0.6189     10721
+   macro avg     0.4958    0.4603    0.4479     10721
+weighted avg     0.6225    0.6189    0.6096     10721
+
+
+=== RESULTADOS VAL ===
+Muestras          : 5282
+Accuracy          : 74.69%
+mAP               : 55.84%
+AP por clase      : ['94.55%', '80.02%', '91.12%', '47.92%', '41.45%', '3.65%', '32.19%']
+
+=== RESULTADOS TEST ===
+Muestras          : 5439
+Accuracy          : 49.46%
+mAP               : 39.69%
+AP por clase      : ['81.90%', '67.79%', '50.49%', '22.84%', '17.12%', '21.53%', '16.17%']
+
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp3_evaluation.txt
