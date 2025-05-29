@@ -37,7 +37,7 @@ Use the scripts based on the task you want to run:
 
 #### Frame-level
 
-- `generate_cropped_masks.py`: Create SAM-based masks for augmentations.
+- `generate_cropped_masks.py`: Create SAM-based masks for augmentations(optional).
 - `extract_and_train_FL.py`: Extract features and train MLP classifiers.
 - `evaluate_FL.py`: Evaluate model and report metrics.
 
