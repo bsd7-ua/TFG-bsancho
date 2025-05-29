@@ -1,6 +1,6 @@
 Iniciando pruebas: Thu May 15 14:31:41 UTC 2025
 
-=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+=== Extractor: dino | Clf: mlp | Water: 0 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -12,7 +12,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.580
  Ep2/20 | Val mAP=0.574
  Ep3/20 | Val mAP=0.575
@@ -22,7 +22,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.580
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.580
-[Main] Modelo guardado en ./models/dino_mlp2_erasing.pth
+[Main] Modelo guardado en ./models/dino_mlp_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -73,9 +73,9 @@ Accuracy          : 53.02%
 mAP               : 42.76%
 AP por clase      : ['85.99%', '75.12%', '74.34%', '16.64%', '15.23%', '14.78%', '17.25%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_erasing_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+=== Extractor: dino | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -87,7 +87,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.569
  Ep2/20 | Val mAP=0.568
  Ep3/20 | Val mAP=0.568
@@ -106,7 +106,7 @@ Epoch 00013: reducing learning rate of group 0 to 1.2500e-05.
  Ep14/20 | Val mAP=0.571
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.573
-[Main] Modelo guardado en ./models/dino_mlp2_silhouette.pth
+[Main] Modelo guardado en ./models/dino_mlp_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -155,9 +155,9 @@ Accuracy          : 52.86%
 mAP               : 45.20%
 AP por clase      : ['85.84%', '83.07%', '66.95%', '19.50%', '14.70%', '25.60%', '20.74%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_silhouette_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+=== Extractor: dino | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -169,7 +169,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.565
  Ep2/20 | Val mAP=0.556
  Ep3/20 | Val mAP=0.565
@@ -188,7 +188,7 @@ Epoch 00014: reducing learning rate of group 0 to 2.5000e-05.
  Ep15/20 | Val mAP=0.562
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.581
-[Main] Modelo guardado en ./models/dino_mlp2_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/dino_mlp_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -237,9 +237,9 @@ Accuracy          : 52.82%
 mAP               : 44.37%
 AP por clase      : ['83.73%', '78.88%', '56.34%', '20.74%', '15.89%', '32.17%', '22.87%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_silhouette_erasing_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+=== Extractor: dino | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -251,7 +251,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.586
  Ep2/20 | Val mAP=0.576
  Ep3/20 | Val mAP=0.565
@@ -261,7 +261,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.569
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.586
-[Main] Modelo guardado en ./models/dino_mlp2_water.pth
+[Main] Modelo guardado en ./models/dino_mlp_water.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -312,9 +312,9 @@ Accuracy          : 53.21%
 mAP               : 40.81%
 AP por clase      : ['83.78%', '71.11%', '70.23%', '18.59%', '17.03%', '10.28%', '14.63%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_water_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+=== Extractor: dino | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -326,7 +326,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.572
  Ep2/20 | Val mAP=0.565
  Ep3/20 | Val mAP=0.571
@@ -346,7 +346,7 @@ Epoch 00014: reducing learning rate of group 0 to 1.2500e-05.
  Ep15/20 | Val mAP=0.577
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.580
-[Main] Modelo guardado en ./models/dino_mlp2_water_erasing.pth
+[Main] Modelo guardado en ./models/dino_mlp_water_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -395,9 +395,9 @@ Accuracy          : 54.48%
 mAP               : 43.18%
 AP por clase      : ['84.32%', '81.21%', '61.97%', '19.00%', '16.35%', '19.50%', '19.92%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_water_erasing_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+=== Extractor: dino | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -409,7 +409,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.571
  Ep2/20 | Val mAP=0.565
  Ep3/20 | Val mAP=0.563
@@ -419,7 +419,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.567
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.571
-[Main] Modelo guardado en ./models/dino_mlp2_water_silhouette.pth
+[Main] Modelo guardado en ./models/dino_mlp_water_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -470,9 +470,9 @@ Accuracy          : 54.18%
 mAP               : 43.42%
 AP por clase      : ['84.90%', '80.66%', '69.66%', '17.92%', '16.14%', '16.04%', '18.63%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_water_silhouette_evaluation.txt
 
-=== Extractor: dino | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+=== Extractor: dino | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Init] Device: cuda
@@ -484,7 +484,7 @@ Using cache found in /root/.cache/torch/hub/facebookresearch_dino_main
 [Cache] Filtrado → 82500 muestras
 [Cache] Cargando val_dino.npz
 [Cache] Cargando test_dino.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.567
  Ep2/20 | Val mAP=0.560
  Ep3/20 | Val mAP=0.567
@@ -498,7 +498,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.568
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.577
-[Main] Modelo guardado en ./models/dino_mlp2_water_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/dino_mlp_water_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_dino_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_dino.npz
@@ -547,9 +547,9 @@ Accuracy          : 55.23%
 mAP               : 44.55%
 AP por clase      : ['84.64%', '80.10%', '58.17%', '19.29%', '16.67%', '30.59%', '22.41%']
 
-Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/dino_mlp_water_silhouette_erasing_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+=== Extractor: resnet | Clf: mlp | Water: 0 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -564,7 +564,7 @@ Todos los resultados también han sido guardados en: ./models/dino_mlp2_water_si
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.565
  Ep2/20 | Val mAP=0.555
  Ep3/20 | Val mAP=0.564
@@ -589,7 +589,7 @@ Epoch 00019: reducing learning rate of group 0 to 1.2500e-05.
  Ep20/20 | Val mAP=0.578
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.579
-[Main] Modelo guardado en ./models/resnet_mlp2_erasing.pth
+[Main] Modelo guardado en ./models/resnet_mlp_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -638,9 +638,9 @@ Accuracy          : 52.69%
 mAP               : 39.58%
 AP por clase      : ['79.22%', '71.84%', '52.48%', '19.57%', '15.94%', '21.45%', '16.59%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_erasing_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+=== Extractor: resnet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -655,7 +655,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_erasin
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.554
  Ep2/20 | Val mAP=0.562
  Ep3/20 | Val mAP=0.565
@@ -667,7 +667,7 @@ Epoch 00007: reducing learning rate of group 0 to 2.5000e-05.
  Ep8/20 | Val mAP=0.562
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.565
-[Main] Modelo guardado en ./models/resnet_mlp2_silhouette.pth
+[Main] Modelo guardado en ./models/resnet_mlp_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -716,9 +716,9 @@ Accuracy          : 52.55%
 mAP               : 39.94%
 AP por clase      : ['79.84%', '77.08%', '61.11%', '17.23%', '15.94%', '10.05%', '18.36%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_silhouette_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+=== Extractor: resnet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -733,7 +733,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhou
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.556
  Ep2/20 | Val mAP=0.558
  Ep3/20 | Val mAP=0.563
@@ -755,7 +755,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhou
  Ep19/20 | Val mAP=0.569
  Ep20/20 | Val mAP=0.579
 [Train] Best mAP: 0.583
-[Main] Modelo guardado en ./models/resnet_mlp2_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/resnet_mlp_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -804,9 +804,9 @@ Accuracy          : 54.27%
 mAP               : 40.05%
 AP por clase      : ['78.75%', '72.84%', '49.25%', '19.90%', '17.65%', '23.02%', '18.98%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_silhouette_erasing_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+=== Extractor: resnet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -821,7 +821,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_silhou
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.561
  Ep2/20 | Val mAP=0.566
  Ep3/20 | Val mAP=0.564
@@ -836,7 +836,7 @@ Epoch 00010: reducing learning rate of group 0 to 2.5000e-05.
  Ep11/20 | Val mAP=0.569
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.579
-[Main] Modelo guardado en ./models/resnet_mlp2_water.pth
+[Main] Modelo guardado en ./models/resnet_mlp_water.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -885,9 +885,9 @@ Accuracy          : 51.79%
 mAP               : 39.99%
 AP por clase      : ['80.53%', '75.73%', '59.26%', '19.72%', '17.40%', '9.08%', '18.19%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_water_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+=== Extractor: resnet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -902,7 +902,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.574
  Ep2/20 | Val mAP=0.567
  Ep3/20 | Val mAP=0.568
@@ -912,7 +912,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.573
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.574
-[Main] Modelo guardado en ./models/resnet_mlp2_water_erasing.pth
+[Main] Modelo guardado en ./models/resnet_mlp_water_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -961,9 +961,9 @@ Accuracy          : 52.75%
 mAP               : 40.55%
 AP por clase      : ['80.80%', '75.89%', '64.35%', '17.12%', '16.75%', '10.08%', '18.89%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_water_erasing_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+=== Extractor: resnet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -978,7 +978,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.567
  Ep2/20 | Val mAP=0.567
  Ep3/20 | Val mAP=0.559
@@ -988,7 +988,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.566
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.567
-[Main] Modelo guardado en ./models/resnet_mlp2_water_silhouette.pth
+[Main] Modelo guardado en ./models/resnet_mlp_water_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -1037,9 +1037,9 @@ Accuracy          : 51.08%
 mAP               : 39.89%
 AP por clase      : ['79.93%', '78.17%', '61.44%', '16.72%', '16.08%', '7.81%', '19.08%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_water_silhouette_evaluation.txt
 
-=== Extractor: resnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+=== Extractor: resnet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1054,7 +1054,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_
 [Cache] Filtrado → 82500 muestras
 [Cache] Cargando val_resnet.npz
 [Cache] Cargando test_resnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.566
  Ep2/20 | Val mAP=0.566
  Ep3/20 | Val mAP=0.560
@@ -1070,7 +1070,7 @@ Epoch 00010: reducing learning rate of group 0 to 1.2500e-05.
  Ep11/20 | Val mAP=0.565
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.571
-[Main] Modelo guardado en ./models/resnet_mlp2_water_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/resnet_mlp_water_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_resnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_resnet.npz
@@ -1119,9 +1119,9 @@ Accuracy          : 52.97%
 mAP               : 41.10%
 AP por clase      : ['79.45%', '77.57%', '60.74%', '18.97%', '15.89%', '14.56%', '20.54%']
 
-Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/resnet_mlp_water_silhouette_erasing_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+=== Extractor: vivit | Clf: mlp | Water: 0 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1132,7 +1132,7 @@ Todos los resultados también han sido guardados en: ./models/resnet_mlp2_water_
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.584
  Ep2/20 | Val mAP=0.572
  Ep3/20 | Val mAP=0.557
@@ -1142,7 +1142,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.553
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.584
-[Main] Modelo guardado en ./models/vivit_mlp2_erasing.pth
+[Main] Modelo guardado en ./models/vivit_mlp_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1193,9 +1193,9 @@ Accuracy          : 50.93%
 mAP               : 39.03%
 AP por clase      : ['83.65%', '70.74%', '56.02%', '20.07%', '17.95%', '7.62%', '17.19%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_erasing_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+=== Extractor: vivit | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1206,7 +1206,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_erasing
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.571
  Ep2/20 | Val mAP=0.562
  Ep3/20 | Val mAP=0.553
@@ -1216,7 +1216,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.554
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.571
-[Main] Modelo guardado en ./models/vivit_mlp2_silhouette.pth
+[Main] Modelo guardado en ./models/vivit_mlp_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1267,9 +1267,9 @@ Accuracy          : 51.44%
 mAP               : 41.32%
 AP por clase      : ['82.87%', '78.40%', '58.99%', '18.92%', '22.01%', '10.28%', '17.81%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_silhouette_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+=== Extractor: vivit | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1280,7 +1280,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhoue
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.576
  Ep2/20 | Val mAP=0.560
  Ep3/20 | Val mAP=0.552
@@ -1290,7 +1290,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.545
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.576
-[Main] Modelo guardado en ./models/vivit_mlp2_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/vivit_mlp_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1341,9 +1341,9 @@ Accuracy          : 51.09%
 mAP               : 39.84%
 AP por clase      : ['83.04%', '75.05%', '53.69%', '19.84%', '20.80%', '8.30%', '18.18%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_silhouette_erasing_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+=== Extractor: vivit | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1354,7 +1354,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_silhoue
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.558
  Ep2/20 | Val mAP=0.575
  Ep3/20 | Val mAP=0.565
@@ -1365,7 +1365,7 @@ Epoch 00006: reducing learning rate of group 0 to 2.5000e-05.
  Ep7/20 | Val mAP=0.547
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.575
-[Main] Modelo guardado en ./models/vivit_mlp2_water.pth
+[Main] Modelo guardado en ./models/vivit_mlp_water.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1416,9 +1416,9 @@ Accuracy          : 51.00%
 mAP               : 37.42%
 AP por clase      : ['81.59%', '64.54%', '52.46%', '21.69%', '18.84%', '8.86%', '13.98%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_water_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+=== Extractor: vivit | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1429,7 +1429,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_e
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.579
  Ep2/20 | Val mAP=0.570
  Ep3/20 | Val mAP=0.559
@@ -1439,7 +1439,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.548
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.579
-[Main] Modelo guardado en ./models/vivit_mlp2_water_erasing.pth
+[Main] Modelo guardado en ./models/vivit_mlp_water_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1490,9 +1490,9 @@ Accuracy          : 51.90%
 mAP               : 38.18%
 AP por clase      : ['81.86%', '66.95%', '54.66%', '20.56%', '17.20%', '9.14%', '16.90%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_water_erasing_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+=== Extractor: vivit | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1503,7 +1503,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_e
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.567
  Ep2/20 | Val mAP=0.566
  Ep3/20 | Val mAP=0.561
@@ -1513,7 +1513,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.542
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.567
-[Main] Modelo guardado en ./models/vivit_mlp2_water_silhouette.pth
+[Main] Modelo guardado en ./models/vivit_mlp_water_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1564,9 +1564,9 @@ Accuracy          : 51.87%
 mAP               : 39.23%
 AP por clase      : ['82.61%', '70.36%', '55.82%', '20.20%', '18.58%', '9.77%', '17.25%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_water_silhouette_evaluation.txt
 
-=== Extractor: vivit | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+=== Extractor: vivit | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 [Init] Device: cuda
 [Init] Cache dir: ./cache_embeddings
@@ -1577,7 +1577,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_s
 [Cache] Filtrado → 82500 muestras
 [Cache] Cargando val_vivit.npz
 [Cache] Cargando test_vivit.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.577
  Ep2/20 | Val mAP=0.557
  Ep3/20 | Val mAP=0.546
@@ -1587,7 +1587,7 @@ Epoch 00005: reducing learning rate of group 0 to 2.5000e-05.
  Ep6/20 | Val mAP=0.550
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.577
-[Main] Modelo guardado en ./models/vivit_mlp2_water_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/vivit_mlp_water_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_vivit_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_vivit.npz
@@ -1638,9 +1638,9 @@ Accuracy          : 51.94%
 mAP               : 39.83%
 AP por clase      : ['82.42%', '74.85%', '54.79%', '21.99%', '19.77%', '5.55%', '19.44%']
 
-Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/vivit_mlp_water_silhouette_erasing_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 0 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1655,7 +1655,7 @@ Todos los resultados también han sido guardados en: ./models/vivit_mlp2_water_s
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.548
  Ep2/20 | Val mAP=0.567
  Ep3/20 | Val mAP=0.570
@@ -1667,7 +1667,7 @@ Epoch 00007: reducing learning rate of group 0 to 2.5000e-05.
  Ep8/20 | Val mAP=0.561
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.570
-[Main] Modelo guardado en ./models/efficientnet_mlp2_erasing.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -1716,9 +1716,9 @@ Accuracy          : 51.99%
 mAP               : 39.66%
 AP por clase      : ['82.41%', '71.79%', '46.20%', '21.98%', '17.11%', '21.15%', '16.94%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_erasing_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1733,7 +1733,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.548
  Ep2/20 | Val mAP=0.564
  Ep3/20 | Val mAP=0.570
@@ -1747,7 +1747,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.565
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.575
-[Main] Modelo guardado en ./models/efficientnet_mlp2_silhouette.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -1796,9 +1796,9 @@ Accuracy          : 51.72%
 mAP               : 40.71%
 AP por clase      : ['82.52%', '81.40%', '45.06%', '22.51%', '16.41%', '19.57%', '17.47%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_silhouette_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1813,7 +1813,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.549
  Ep2/20 | Val mAP=0.562
  Ep3/20 | Val mAP=0.567
@@ -1826,7 +1826,7 @@ Epoch 00008: reducing learning rate of group 0 to 2.5000e-05.
  Ep9/20 | Val mAP=0.557
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.568
-[Main] Modelo guardado en ./models/efficientnet_mlp2_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -1875,9 +1875,9 @@ Accuracy          : 53.93%
 mAP               : 41.14%
 AP por clase      : ['82.19%', '79.13%', '43.64%', '23.83%', '19.14%', '22.68%', '17.36%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_silhouette_erasing_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1892,7 +1892,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.558
  Ep2/20 | Val mAP=0.567
  Ep3/20 | Val mAP=0.568
@@ -1906,7 +1906,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.559
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.575
-[Main] Modelo guardado en ./models/efficientnet_mlp2_water.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_water.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -1955,9 +1955,9 @@ Accuracy          : 51.39%
 mAP               : 38.60%
 AP por clase      : ['82.00%', '68.05%', '50.64%', '23.90%', '19.52%', '8.36%', '17.75%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_water_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -1972,7 +1972,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.562
  Ep2/20 | Val mAP=0.577
  Ep3/20 | Val mAP=0.573
@@ -1983,7 +1983,7 @@ Epoch 00006: reducing learning rate of group 0 to 2.5000e-05.
  Ep7/20 | Val mAP=0.558
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.577
-[Main] Modelo guardado en ./models/efficientnet_mlp2_water_erasing.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_water_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -2032,9 +2032,9 @@ Accuracy          : 51.35%
 mAP               : 38.68%
 AP por clase      : ['81.96%', '70.06%', '49.53%', '24.47%', '20.57%', '7.58%', '16.59%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_water_erasing_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2049,7 +2049,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.550
  Ep2/20 | Val mAP=0.561
  Ep3/20 | Val mAP=0.572
@@ -2064,7 +2064,7 @@ Epoch 00010: reducing learning rate of group 0 to 2.5000e-05.
  Ep11/20 | Val mAP=0.567
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.573
-[Main] Modelo guardado en ./models/efficientnet_mlp2_water_silhouette.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_water_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -2113,9 +2113,9 @@ Accuracy          : 52.55%
 mAP               : 40.06%
 AP por clase      : ['81.80%', '77.35%', '46.00%', '25.00%', '19.72%', '13.68%', '16.88%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_water_silhouette_evaluation.txt
 
-=== Extractor: efficientnet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+=== Extractor: efficientnet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2130,7 +2130,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 82500 muestras
 [Cache] Cargando val_efficientnet.npz
 [Cache] Cargando test_efficientnet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.556
  Ep2/20 | Val mAP=0.563
  Ep3/20 | Val mAP=0.567
@@ -2144,7 +2144,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.557
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.571
-[Main] Modelo guardado en ./models/efficientnet_mlp2_water_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/efficientnet_mlp_water_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_efficientnet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_efficientnet.npz
@@ -2193,9 +2193,9 @@ Accuracy          : 52.93%
 mAP               : 40.00%
 AP por clase      : ['81.63%', '72.47%', '44.50%', '24.62%', '19.05%', '19.46%', '18.24%']
 
-Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_water_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/efficientnet_mlp_water_silhouette_erasing_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 0 Erasing: 1 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 0 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2210,7 +2210,7 @@ Todos los resultados también han sido guardados en: ./models/efficientnet_mlp2_
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.550
  Ep2/20 | Val mAP=0.553
  Ep3/20 | Val mAP=0.559
@@ -2228,7 +2228,7 @@ Epoch 00013: reducing learning rate of group 0 to 2.5000e-05.
  Ep14/20 | Val mAP=0.572
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.578
-[Main] Modelo guardado en ./models/mobilenet_mlp2_erasing.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2277,9 +2277,9 @@ Accuracy          : 53.04%
 mAP               : 36.84%
 AP por clase      : ['80.18%', '52.52%', '46.49%', '21.70%', '13.79%', '26.06%', '17.14%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_erasing_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 0 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2294,7 +2294,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_era
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.528
  Ep2/20 | Val mAP=0.552
  Ep3/20 | Val mAP=0.564
@@ -2316,7 +2316,7 @@ Epoch 00016: reducing learning rate of group 0 to 1.2500e-05.
  Ep17/20 | Val mAP=0.575
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.580
-[Main] Modelo guardado en ./models/mobilenet_mlp2_silhouette.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2365,9 +2365,9 @@ Accuracy          : 54.07%
 mAP               : 39.22%
 AP por clase      : ['82.46%', '71.78%', '47.97%', '19.68%', '14.17%', '16.94%', '21.54%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_silhouette_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 0 Silhouette: 1 Erasing: 1 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 0 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2382,7 +2382,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_sil
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.547
  Ep2/20 | Val mAP=0.559
  Ep3/20 | Val mAP=0.567
@@ -2396,7 +2396,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.568
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.576
-[Main] Modelo guardado en ./models/mobilenet_mlp2_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2445,9 +2445,9 @@ Accuracy          : 53.94%
 mAP               : 39.28%
 AP por clase      : ['82.99%', '71.66%', '47.82%', '20.31%', '15.06%', '17.48%', '19.60%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_silhouette_erasing_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 0 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2462,7 +2462,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_sil
 [Cache] Filtrado → 41250 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.539
  Ep2/20 | Val mAP=0.550
  Ep3/20 | Val mAP=0.553
@@ -2476,7 +2476,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.567
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.572
-[Main] Modelo guardado en ./models/mobilenet_mlp2_water.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_water.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2525,9 +2525,9 @@ Accuracy          : 52.51%
 mAP               : 38.17%
 AP por clase      : ['81.52%', '59.72%', '58.80%', '22.04%', '15.14%', '11.97%', '17.98%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_water_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 0 Erasing: 1 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 1 Silhouette: 0 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2542,7 +2542,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_wat
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.556
  Ep2/20 | Val mAP=0.564
  Ep3/20 | Val mAP=0.569
@@ -2560,7 +2560,7 @@ Epoch 00012: reducing learning rate of group 0 to 1.2500e-05.
  Ep13/20 | Val mAP=0.568
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.571
-[Main] Modelo guardado en ./models/mobilenet_mlp2_water_erasing.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_water_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2609,9 +2609,9 @@ Accuracy          : 54.40%
 mAP               : 38.39%
 AP por clase      : ['81.46%', '64.18%', '52.33%', '20.08%', '14.87%', '18.13%', '17.70%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_water_erasing_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 0 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 0 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2626,7 +2626,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_wat
 [Cache] Filtrado → 61875 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.523
  Ep2/20 | Val mAP=0.543
  Ep3/20 | Val mAP=0.549
@@ -2639,7 +2639,7 @@ Epoch 00008: reducing learning rate of group 0 to 2.5000e-05.
  Ep9/20 | Val mAP=0.563
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.566
-[Main] Modelo guardado en ./models/mobilenet_mlp2_water_silhouette.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_water_silhouette.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2688,9 +2688,9 @@ Accuracy          : 54.48%
 mAP               : 39.79%
 AP por clase      : ['83.18%', '74.71%', '55.12%', '22.15%', '14.63%', '9.07%', '19.70%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_silhouette_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_water_silhouette_evaluation.txt
 
-=== Extractor: mobilenet | Clf: mlp2 | Water: 1 Silhouette: 1 Erasing: 1 ===
+=== Extractor: mobilenet | Clf: mlp | Water: 1 Silhouette: 1 Erasing: 1 ===
 >>> Ejecutando extract_a_train_aug.py
 /opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(
@@ -2705,7 +2705,7 @@ Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_wat
 [Cache] Filtrado → 82500 muestras
 [Cache] Cargando val_mobilenet.npz
 [Cache] Cargando test_mobilenet.npz
-[Train] mlp2, epochs=20
+[Train] mlp, epochs=20
  Ep1/20 | Val mAP=0.550
  Ep2/20 | Val mAP=0.568
  Ep3/20 | Val mAP=0.574
@@ -2719,7 +2719,7 @@ Epoch 00009: reducing learning rate of group 0 to 2.5000e-05.
  Ep10/20 | Val mAP=0.568
 [EarlyStopping] sin mejora 5 epochs → STOP
 [Train] Best mAP: 0.578
-[Main] Modelo guardado en ./models/mobilenet_mlp2_water_silhouette_erasing.pth
+[Main] Modelo guardado en ./models/mobilenet_mlp_water_silhouette_erasing.pth
 [Main] Embeddings guardados en:
   Train → ./cache_embeddings/train_mobilenet_water_silhouette_erasing.npz
   Val   → ./cache_embeddings/val_mobilenet.npz
@@ -2768,6 +2768,6 @@ Accuracy          : 54.22%
 mAP               : 40.44%
 AP por clase      : ['83.14%', '70.38%', '51.35%', '19.97%', '14.02%', '23.15%', '21.03%']
 
-Todos los resultados también han sido guardados en: ./models/mobilenet_mlp2_water_silhouette_erasing_evaluation.txt
+Todos los resultados también han sido guardados en: ./models/mobilenet_mlp_water_silhouette_erasing_evaluation.txt
 
 Pruebas completadas: Thu May 15 15:30:12 UTC 2025
