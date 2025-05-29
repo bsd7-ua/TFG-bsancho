@@ -4,13 +4,13 @@ This project investigates deep learning methods for fine-grained bird behavior r
 This repository provides the complete experimental framework used in our study.  
 
 For the frame-level pipeline, it includes:  
-`generate_cropped_masks.py` to generate segmentation masks using SAM (required for the dataset augmentation);  
-`extract_and_train_FL.py` to extract features (over the augmented or base dataset) and train MLP classifiers;  
+`generate_cropped_masks.py` to generate segmentation masks using SAM (required for the dataset augmentation).
+`extract_and_train_FL.py` to extract features (over the augmented or base dataset) and train MLP classifiers.
 and `evaluate_FL.py` to run evaluation.  
 
 For the segment-level pipeline, we include original PDAN code (`PDAN.py`, `apmeter.py`, `meter.py`) and adapted modules:  
-`birds_feature_dataset.py` to use the dataset;  
-`extract_I3D_crops.py` and `extract_mvit_and_r2plus1d.py` for feature extraction;  
+`birds_feature_dataset.py` to use the dataset.
+`extract_I3D_crops.py` and `extract_mvit_and_r2plus1d.py` for feature extraction.
 `train_PDAN_birds.py`, `evaluate_pdan.py`, and `train_and_eval_PDAN.sh` for training and evaluation.
 
 
